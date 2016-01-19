@@ -1,5 +1,5 @@
 /*
- * Copyright 2011 Kristian Kraljic, Johannes Schüth 2008. All rights reserved.
+ * Copyright 2011 Kristian Kraljic, Johannes Schï¿½th 2008. All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without modification, are
  * permitted provided that the following conditions are met:
@@ -23,7 +23,7 @@
  *
  * The views and conclusions contained in the software and documentation are those of the
  * authors and should not be interpreted as representing official policies, either expressed
- * or implied, of Kristian Kraljic and Johannes Schüth.
+ * or implied, of Kristian Kraljic and Johannes Schï¿½th.
  */
 
 package de.ksquared.system.keyboard;
@@ -32,23 +32,40 @@ import java.util.List;
 import java.util.Vector;
 
 public class GlobalKeyListener {
-	protected PoolHook hook;
-	public GlobalKeyListener() { (hook=new PoolHook(this)).start();	}
-	protected List<KeyListener> listeners = new Vector<KeyListener>();
 
-	public void addKeyListener(KeyListener listener) { listeners.add(listener); }
-	public void removeKeyListener(KeyListener listener) { listeners.remove(listener); }
+    protected PoolHook hook;
 
-	void keyPressed(KeyEvent event) {
-		try {
-			for(KeyListener listener:listeners)
-				listener.keyPressed(event);
-		} catch(Exception e) { e.printStackTrace(); }
-	}
-	void keyReleased(KeyEvent event) {
-		try {
-			for(KeyListener listener:listeners)
-				listener.keyReleased(event);
-		} catch(Exception e) { e.printStackTrace(); }
-	}
+    public GlobalKeyListener() {
+        (hook = new PoolHook(this)).start();
+    }
+
+    protected List<KeyListener> listeners = new Vector<KeyListener>();
+
+    public void addKeyListener(final KeyListener listener) {
+        listeners.add(listener);
+    }
+
+    public void removeKeyListener(final KeyListener listener) {
+        listeners.remove(listener);
+    }
+
+    void keyPressed(final KeyEvent event) {
+        try {
+            for (final KeyListener listener : listeners) {
+                listener.keyPressed(event);
+            }
+        } catch (final Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    void keyReleased(final KeyEvent event) {
+        try {
+            for (final KeyListener listener : listeners) {
+                listener.keyReleased(event);
+            }
+        } catch (final Exception e) {
+            e.printStackTrace();
+        }
+    }
 }

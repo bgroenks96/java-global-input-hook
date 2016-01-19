@@ -1,5 +1,5 @@
 /*
- * Copyright 2011 Kristian Kraljic, Johannes Schüth 2008. All rights reserved.
+ * Copyright 2011 Kristian Kraljic, Johannes Schï¿½th 2008. All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without modification, are
  * permitted provided that the following conditions are met:
@@ -23,12 +23,16 @@
  *
  * The views and conclusions contained in the software and documentation are those of the
  * authors and should not be interpreted as representing official policies, either expressed
- * or implied, of Kristian Kraljic and Johannes Schüth.
+ * or implied, of Kristian Kraljic and Johannes Schï¿½th.
  */
 
 package de.ksquared.system.keyboard;
 
-public class KeyAdapter implements KeyListener {
-	@Override public void keyPressed(KeyEvent event) {}
-	@Override public void keyReleased(KeyEvent event) {}
+import java.util.EventListener;
+
+public interface KeyListener extends EventListener {
+
+    public void keyPressed(KeyEvent event);
+
+    public void keyReleased(KeyEvent event);
 }

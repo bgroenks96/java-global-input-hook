@@ -26,25 +26,29 @@
  * or implied, of Kristian Kraljic and Johannes Schüth.
  */
 
-package de.ksquared.test.system.keyboard;
+#include <jni.h>
 
-import de.ksquared.system.keyboard.GlobalKeyListener;
-import de.ksquared.system.keyboard.KeyAdapter;
-import de.ksquared.system.keyboard.KeyEvent;
+/* Header for class MouseHook */
+#ifndef _Included_MouseHook
+#define _Included_MouseHook
+#ifdef __cplusplus
+extern "C" {
+#endif
 
-public class KeyboardHookTest {
-	public static void main(String[] args) {
-		new GlobalKeyListener().addKeyListener(new KeyAdapter() {
-			@Override public void keyPressed(KeyEvent event) { System.out.println(event); }
-			@Override public void keyReleased(KeyEvent event) {
-				System.out.println(event);
-				if(event.getVirtualKeyCode()==KeyEvent.VK_ADD
-				&& event.isCtrlPressed())
-					System.out.println("CTRL+ADD was just released (CTRL is still pressed)");
-			}
-		});
-		while(true)
-			try { Thread.sleep(100); }
-			catch(InterruptedException e) { e.printStackTrace(); }
-	}
+/*
+ * Class:     MouseHook
+ * Method:    registerHook
+ * Signature: (LGlobalEventListener;)V
+ */
+JNIEXPORT void JNICALL Java_de_ksquared_system_mouse_MouseHook_registerHook(JNIEnv *,jobject thisObj,jobject listenerObj);
+/*
+ * Class:     MouseHook
+ * Method:    unregisterHook
+ * Signature: ()V
+ */
+JNIEXPORT void JNICALL Java_de_ksquared_system_mouse_MouseHook_unregisterHook(JNIEnv *env,jobject thisObj);
+
+#ifdef __cplusplus
 }
+#endif
+#endif

@@ -1,5 +1,5 @@
 /*
- * Copyright 2011 Kristian Kraljic, Johannes Schüth 2008. All rights reserved.
+ * Copyright 2011 Kristian Kraljic, Johannes Schï¿½th 2008. All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without modification, are
  * permitted provided that the following conditions are met:
@@ -23,14 +23,59 @@
  *
  * The views and conclusions contained in the software and documentation are those of the
  * authors and should not be interpreted as representing official policies, either expressed
- * or implied, of Kristian Kraljic and Johannes Schüth.
+ * or implied, of Kristian Kraljic and Johannes Schï¿½th.
  */
 
-package de.ksquared.system.keyboard;
+package de.ksquared.system.mouse;
 
-import java.util.EventListener;
+import java.util.List;
+import java.util.Vector;
 
-public interface KeyListener extends EventListener {
-  public void keyPressed(KeyEvent event);
-  public void keyReleased(KeyEvent event);
+public class GlobalMouseListener {
+
+    protected PoolHook hook;
+
+    public GlobalMouseListener() {
+        (hook = new PoolHook(this)).start();
+    }
+
+    protected List<MouseListener> listeners = new Vector<MouseListener>();
+
+    public void addMouseListener(final MouseListener listener) {
+        listeners.add(listener);
+    }
+
+    public void removeMouseListener(final MouseListener listener) {
+        listeners.remove(listener);
+    }
+
+    void mouseMoved(final MouseEvent event) {
+        try {
+            for (final MouseListener listener : listeners) {
+                listener.mouseMoved(event);
+            }
+        } catch (final Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    void mousePressed(final MouseEvent event) {
+        try {
+            for (final MouseListener listener : listeners) {
+                listener.mousePressed(event);
+            }
+        } catch (final Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    void mouseReleased(final MouseEvent event) {
+        try {
+            for (final MouseListener listener : listeners) {
+                listener.mouseReleased(event);
+            }
+        } catch (final Exception e) {
+            e.printStackTrace();
+        }
+    }
 }
