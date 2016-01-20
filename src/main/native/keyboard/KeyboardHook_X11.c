@@ -12,36 +12,32 @@ jmethodID processKeyMethod = NULL;
 pthread pollingThread;
 int running = 0;
 
-void clean_up () {
-	if (!running) return;
-    pthread_cancel(pollingThread);
-}
-
 void *poll_input_x11(void *threadId) {
 	struct timespec t1, t2;
 	t1.tv_sec = 0;
-	t1.tv_nsec = 10000000L;
+	t1.tv_nsec = 10000000L; // 10ms sleep timer on polling loop
 	XEvent event;
 	while(nanosleep(&t1, &t2) == 0) {
 		XNextEvent(disp, &event);
-		if(jvm->AttachCurrentThread((void **)&env, NULL) >= 0) {
+		if(event.type)
+		if((*jvm)->AttachCurrentThread(jvm, (void **)&env, NULL) >= 0) {
 			jboolean transitionState = (jboolean)FALSE;
 			switch(event.type)  {
 				case KeyPress:
 					transitionState = (jboolean)TRUE;
 				case KeyRelease:
-					CallVoidMethod(env,
-							       keyboardHookObject,
-							       processKeyMethod,
-						           transitionState,
-								   event.xkey.keycode,
-								   globalKeyListenerObject);
+					(*env)->CallVoidMethod(env,
+							               keyboardHookObject,
+							               processKeyMethod,
+						                   transitionState,
+						                   event.xkey.keycode,
+								           globalKeyListenerObject);
 					break;
 				default:
 					break;
 			}
 		} else {
-			puts("NATIVE: LowLevelKeyboardProc - Error on the attach current thread.\n");
+			puts("NATIVE: poll_input_x11 - Error on attaching current thread.\n");
 		}
 	}
 }
@@ -50,9 +46,9 @@ JNIEXPORT void JNICALL Java_de_ksquared_system_keyboard_KeyboardHook_registerHoo
 	puts("NATIVE: Java_de_ksquared_system_keyboard_KeyboardHook_registerHook - Hooking started!\n");
 
 	globalKeyListenerObject = _globalKeyListenerObject;
-	keyboardHookObject = env->NewGlobalRef(obj);
-	jclass cls = env->GetObjectClass(keyboardHookObject);
-	processKeyMethod = env->GetMethodID(cls,"processKey","(ZILde/ksquared/system/keyboard/GlobalKeyListener;)V");
+	keyboardHookObject = (*env)->NewGlobalRef(env, obj);
+	jclass cls = (*env)->GetObjectClass(env, keyboardHookObject);
+	processKeyMethod = (*env)->GetMethodID(env, cls, "processKey", "(ZILde/ksquared/system/keyboard/GlobalKeyListener;)V");
 
 	disp = XOpenDisplay(0);
 	if (!disp) {
@@ -62,15 +58,14 @@ JNIEXPORT void JNICALL Java_de_ksquared_system_keyboard_KeyboardHook_registerHoo
 
 	root = DefaultRootWindow(disp);
 
-	env->GetJavaVM(&jvm);
+	(*env)->GetJavaVM(env, &jvm);
 
 	int chk = pthread_create(&pollingThread, NULL, poll_input_x11, (void*) 0);
 	running = 1;
-
-	// "NATIVE: Java_de_ksquared_system_keyboard_KeyboardHook_registerHook - Unhook failed\n")
-	// "NATIVE: Java_de_ksquared_system_keyboard_KeyboardHook_registerHook - Unhook successful\n"));
 }
 
 JNIEXPORT void JNICALL Java_de_ksquared_system_keyboard_KeyboardHook_unregisterHook(JNIEnv *env,jobject object) {
-	clean_up ();
+	if (!running) return;
+    pthread_cancel(pollingThread);
+    pthread_exit(NULL);
 }

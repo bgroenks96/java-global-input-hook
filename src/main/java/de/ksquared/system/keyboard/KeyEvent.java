@@ -1,4 +1,18 @@
 /*
+ * Copyright (c) 2016 Brian Groenke
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation
+ * files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy,
+ * modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software
+ * is furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
+ * WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+ * COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+ * ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ * ----------------------------------------------------------------------------------------------------------------------------
  * Copyright 2011 Kristian Kraljic, Johannes Sch�th 2008. All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without modification, are
@@ -29,55 +43,220 @@
 package de.ksquared.system.keyboard;
 
 import java.util.EventObject;
+import java.util.HashMap;
+import java.util.Map;
 
 public class KeyEvent extends EventObject {
 
     private static final long serialVersionUID = -8194688548489965445L;
 
-    public static final int VK_UNDEFINED = 0x0;
-    public static final int VK_LBUTTON = NativeKeyCodes.KC_LBUTTON(), VK_RBUTTON = 0x02, VK_CANCEL = 0x03,
-                    VK_MBUTTON = 0x04, VK_XBUTTON1 = 0x05, VK_XBUTTON2 = 0x06, VK_BACK = 0x08, VK_TAB = 0x09,
-                    VK_CLEAR = 0x0C, VK_RETURN = 0x0D, VK_SHIFT = 0x10, VK_CONTROL = 0x11, VK_MENU = 0x12,
-                    VK_PAUSE = 0x13, VK_CAPITAL = 0x14, VK_KANA = 0x15, VK_HANGUEL = 0x15, VK_HANGUL = 0x15,
-                    VK_JUNJA = 0x17, VK_FINAL = 0x18, VK_HANJA = 0x19, VK_KANJI = 0x19, VK_ESCAPE = 0x1B,
-                    VK_CONVERT = 0x1C, VK_NONCONVERT = 0x1D, VK_ACCEPT = 0x1E, VK_MODECHANGE = 0x1F, VK_SPACE = 0x20,
-                    VK_PRIOR = 0x21, VK_NEXT = 0x22, VK_END = 0x23, VK_HOME = 0x24, VK_LEFT = 0x25, VK_UP = 0x26,
-                    VK_RIGHT = 0x27, VK_DOWN = 0x28, VK_SELECT = 0x29, VK_PRINT = 0x2A, VK_EXECUTE = 0x2B,
-                    VK_SNAPSHOT = 0x2C, VK_INSERT = 0x2D, VK_DELETE = 0x2E, VK_HELP = 0x2F, VK_0 = 0x30, VK_1 = 0x31,
-                    VK_2 = 0x32, VK_3 = 0x33, VK_4 = 0x34, VK_5 = 0x35, VK_6 = 0x36, VK_7 = 0x37, VK_8 = 0x38,
-                    VK_9 = 0x39, VK_A = 0x41, VK_B = 0x42, VK_C = 0x43, VK_D = 0x44, VK_E = 0x45, VK_F = 0x46,
-                    VK_G = 0x47, VK_H = 0x48, VK_I = 0x49, VK_J = 0x4A, VK_K = 0x4B, VK_L = 0x4C, VK_M = 0x4D,
-                    VK_N = 0x4E, VK_O = 0x4F, VK_P = 0x50, VK_Q = 0x51, VK_R = 0x52, VK_S = 0x53, VK_T = 0x54,
-                    VK_U = 0x55, VK_V = 0x56, VK_W = 0x57, VK_X = 0x58, VK_Y = 0x59, VK_Z = 0x5A, VK_LWIN = 0x5B,
-                    VK_RWIN = 0x5C, VK_APPS = 0x5D, VK_SLEEP = 0x5F, VK_NUMPAD0 = 0x60, VK_NUMPAD1 = 0x61,
-                    VK_NUMPAD2 = 0x62, VK_NUMPAD3 = 0x63, VK_NUMPAD4 = 0x64, VK_NUMPAD5 = 0x65, VK_NUMPAD6 = 0x66,
-                    VK_NUMPAD7 = 0x67, VK_NUMPAD8 = 0x68, VK_NUMPAD9 = 0x69, VK_MULTIPLY = 0x6A, VK_ADD = 0x6B,
-                    VK_SEPARATOR = 0x6C, VK_SUBTRACT = 0x6D, VK_DECIMAL = 0x6E, VK_DIVIDE = 0x6F, VK_F1 = 0x70,
-                    VK_F2 = 0x71, VK_F3 = 0x72, VK_F4 = 0x73, VK_F5 = 0x74, VK_F6 = 0x75, VK_F7 = 0x76, VK_F8 = 0x77,
-                    VK_F9 = 0x78, VK_F10 = 0x79, VK_F11 = 0x7A, VK_F12 = 0x7B, VK_F13 = 0x7C, VK_F14 = 0x7D,
-                    VK_F15 = 0x7E, VK_F16 = 0x7F, VK_F17 = 0x80, VK_F18 = 0x81, VK_F19 = 0x82, VK_F20 = 0x83,
-                    VK_F21 = 0x84, VK_F22 = 0x85, VK_F23 = 0x86, VK_F24 = 0x87, VK_NUMLOCK = 0x90, VK_SCROLL = 0x91,
-                    VK_LSHIFT = 0xA0, VK_RSHIFT = 0xA1, VK_LCONTROL = 0xA2, VK_RCONTROL = 0xA3, VK_LMENU = 0xA4,
-                    VK_RMENU = 0xA5, VK_BROWSER_BACK = 0xA6, VK_BROWSER_FORWARD = 0xA7, VK_BROWSER_REFRESH = 0xA8,
-                    VK_BROWSER_STOP = 0xA9, VK_BROWSER_SEARCH = 0xAA, VK_BROWSER_FAVORITES = 0xAB,
-                    VK_BROWSER_HOME = 0xAC, VK_VOLUME_MUTE = 0xAD, VK_VOLUME_DOWN = 0xAE, VK_VOLUME_UP = 0xAF,
-                    VK_MEDIA_NEXT_TRACK = 0xB0, VK_MEDIA_PREV_TRACK = 0xB1, VK_MEDIA_STOP = 0xB2,
-                    VK_MEDIA_PLAY_PAUSE = 0xB3, VK_LAUNCH_MAIL = 0xB4, VK_LAUNCH_MEDIA_SELECT = 0xB5,
-                    VK_LAUNCH_APP1 = 0xB6, VK_LAUNCH_APP2 = 0xB7, VK_OEM_1 = 0xBA, VK_OEM_PLUS = 0xBB,
-                    VK_OEM_COMMA = 0xBC, VK_OEM_MINUS = 0xBD, VK_OEM_PERIOD = 0xBE, VK_OEM_2 = 0xBF, VK_OEM_3 = 0xC0,
-                    VK_OEM_4 = 0xDB, VK_OEM_5 = 0xDC, VK_OEM_6 = 0xDD, VK_OEM_7 = 0xDE, VK_OEM_8 = 0xDF,
-                    VK_OEM_102 = 0xE2, VK_PROCESSKEY = 0xE5, VK_PACKET = 0xE7, VK_ATTN = 0xF6, VK_CRSEL = 0xF7,
-                    VK_EXSEL = 0xF8, VK_EREOF = 0xF9, VK_PLAY = 0xFA, VK_ZOOM = 0xFB, VK_NONAME = 0xFC, VK_PA1 = 0xFD,
-                    VK_OEM_CLEAR = 0xFE;
+    public enum KeyCode {
+        VK_UNDEFINED(NativeKeyCodes.KC_UNDEFINED()),
+        VK_LBUTTON(NativeKeyCodes.KC_LBUTTON()),
+        VK_RBUTTON(NativeKeyCodes.KC_RBUTTON()),
+        VK_CANCEL(NativeKeyCodes.KC_CANCEL()),
+        VK_MBUTTON(NativeKeyCodes.KC_MBUTTON()),
+        VK_XBUTTON1(NativeKeyCodes.KC_XBUTTON1()),
+        VK_XBUTTON2(NativeKeyCodes.KC_XBUTTON2()),
+        VK_BACK(NativeKeyCodes.KC_BACK()),
+        VK_TAB(NativeKeyCodes.KC_TAB()),
+        VK_CLEAR(NativeKeyCodes.KC_CLEAR()),
+        VK_RETURN(NativeKeyCodes.KC_RETURN()),
+        VK_SHIFT(NativeKeyCodes.KC_SHIFT()),
+        VK_CONTROL(NativeKeyCodes.KC_CONTROL()),
+        VK_MENU(NativeKeyCodes.KC_MENU()),
+        VK_PAUSE(NativeKeyCodes.KC_PAUSE()),
+        VK_CAPITAL(NativeKeyCodes.KC_CAPITAL()),
+        VK_KANA(NativeKeyCodes.KC_KANA()),
+        VK_HANGUEL(NativeKeyCodes.KC_HANGUEL()),
+        VK_HANGUL(NativeKeyCodes.KC_HANGUL()),
+        VK_JUNJA(NativeKeyCodes.KC_JUNJA()),
+        VK_FINAL(NativeKeyCodes.KC_FINAL()),
+        VK_HANJA(NativeKeyCodes.KC_HANJA()),
+        VK_KANJI(NativeKeyCodes.KC_KANJI()),
+        VK_ESCAPE(NativeKeyCodes.KC_ESCAPE()),
+        VK_CONVERT(NativeKeyCodes.KC_CONVERT()),
+        VK_NONCONVERT(NativeKeyCodes.KC_NONCONVERT()),
+        VK_ACCEPT(NativeKeyCodes.KC_ACCEPT()),
+        VK_MODECHANGE(NativeKeyCodes.KC_MODECHANGE()),
+        VK_SPACE(NativeKeyCodes.KC_SPACE()),
+        VK_PRIOR(NativeKeyCodes.KC_PRIOR()),
+        VK_NEXT(NativeKeyCodes.KC_NEXT()),
+        VK_END(NativeKeyCodes.KC_END()),
+        VK_HOME(NativeKeyCodes.KC_HOME()),
+        VK_LEFT(NativeKeyCodes.KC_LEFT()),
+        VK_UP(NativeKeyCodes.KC_UP()),
+        VK_RIGHT(NativeKeyCodes.KC_RIGHT()),
+        VK_DOWN(NativeKeyCodes.KC_DOWN()),
+        VK_SELECT(NativeKeyCodes.KC_SELECT()),
+        VK_PRINT(NativeKeyCodes.KC_PRINT()),
+        VK_EXECUTE(NativeKeyCodes.KC_EXECUTE()),
+        VK_SNAPSHOT(NativeKeyCodes.KC_SNAPSHOT()),
+        VK_INSERT(NativeKeyCodes.KC_INSERT()),
+        VK_DELETE(NativeKeyCodes.KC_DELETE()),
+        VK_HELP(NativeKeyCodes.KC_HELP()),
+        VK_0(NativeKeyCodes.KC_0()),
+        VK_1(NativeKeyCodes.KC_1()),
+        VK_2(NativeKeyCodes.KC_2()),
+        VK_3(NativeKeyCodes.KC_3()),
+        VK_4(NativeKeyCodes.KC_4()),
+        VK_5(NativeKeyCodes.KC_5()),
+        VK_6(NativeKeyCodes.KC_6()),
+        VK_7(NativeKeyCodes.KC_7()),
+        VK_8(NativeKeyCodes.KC_8()),
+        VK_9(NativeKeyCodes.KC_9()),
+        VK_A(NativeKeyCodes.KC_A()),
+        VK_B(NativeKeyCodes.KC_B()),
+        VK_C(NativeKeyCodes.KC_C()),
+        VK_D(NativeKeyCodes.KC_D()),
+        VK_E(NativeKeyCodes.KC_E()),
+        VK_F(NativeKeyCodes.KC_F()),
+        VK_G(NativeKeyCodes.KC_G()),
+        VK_H(NativeKeyCodes.KC_H()),
+        VK_I(NativeKeyCodes.KC_I()),
+        VK_J(NativeKeyCodes.KC_J()),
+        VK_K(NativeKeyCodes.KC_K()),
+        VK_L(NativeKeyCodes.KC_L()),
+        VK_M(NativeKeyCodes.KC_M()),
+        VK_N(NativeKeyCodes.KC_N()),
+        VK_O(NativeKeyCodes.KC_O()),
+        VK_P(NativeKeyCodes.KC_P()),
+        VK_Q(NativeKeyCodes.KC_Q()),
+        VK_R(NativeKeyCodes.KC_R()),
+        VK_S(NativeKeyCodes.KC_S()),
+        VK_T(NativeKeyCodes.KC_T()),
+        VK_U(NativeKeyCodes.KC_U()),
+        VK_V(NativeKeyCodes.KC_V()),
+        VK_W(NativeKeyCodes.KC_W()),
+        VK_X(NativeKeyCodes.KC_X()),
+        VK_Y(NativeKeyCodes.KC_Y()),
+        VK_Z(NativeKeyCodes.KC_Z()),
+        VK_LWIN(NativeKeyCodes.KC_LWIN()),
+        VK_RWIN(NativeKeyCodes.KC_RWIN()),
+        VK_APPS(NativeKeyCodes.KC_APPS()),
+        VK_SLEEP(NativeKeyCodes.KC_SLEEP()),
+        VK_NUMPAD0(NativeKeyCodes.KC_NUMPAD0()),
+        VK_NUMPAD1(NativeKeyCodes.KC_NUMPAD1()),
+        VK_NUMPAD2(NativeKeyCodes.KC_NUMPAD2()),
+        VK_NUMPAD3(NativeKeyCodes.KC_NUMPAD3()),
+        VK_NUMPAD4(NativeKeyCodes.KC_NUMPAD4()),
+        VK_NUMPAD5(NativeKeyCodes.KC_NUMPAD5()),
+        VK_NUMPAD6(NativeKeyCodes.KC_NUMPAD6()),
+        VK_NUMPAD7(NativeKeyCodes.KC_NUMPAD7()),
+        VK_NUMPAD8(NativeKeyCodes.KC_NUMPAD8()),
+        VK_NUMPAD9(NativeKeyCodes.KC_NUMPAD9()),
+        VK_MULTIPLY(NativeKeyCodes.KC_MULTIPLY()),
+        VK_ADD(NativeKeyCodes.KC_ADD()),
+        VK_SEPARATOR(NativeKeyCodes.KC_SEPARATOR()),
+        VK_SUBTRACT(NativeKeyCodes.KC_SUBTRACT()),
+        VK_DECIMAL(NativeKeyCodes.KC_DECIMAL()),
+        VK_DIVIDE(NativeKeyCodes.KC_DIVIDE()),
+        VK_F1(NativeKeyCodes.KC_F1()),
+        VK_F2(NativeKeyCodes.KC_F2()),
+        VK_F3(NativeKeyCodes.KC_F3()),
+        VK_F4(NativeKeyCodes.KC_F4()),
+        VK_F5(NativeKeyCodes.KC_F5()),
+        VK_F6(NativeKeyCodes.KC_F6()),
+        VK_F7(NativeKeyCodes.KC_F7()),
+        VK_F8(NativeKeyCodes.KC_F8()),
+        VK_F9(NativeKeyCodes.KC_F9()),
+        VK_F10(NativeKeyCodes.KC_F10()),
+        VK_F11(NativeKeyCodes.KC_F11()),
+        VK_F12(NativeKeyCodes.KC_F12()),
+        VK_F13(NativeKeyCodes.KC_F13()),
+        VK_F14(NativeKeyCodes.KC_F14()),
+        VK_F15(NativeKeyCodes.KC_F15()),
+        VK_F16(NativeKeyCodes.KC_F16()),
+        VK_F17(NativeKeyCodes.KC_F17()),
+        VK_F18(NativeKeyCodes.KC_F18()),
+        VK_F19(NativeKeyCodes.KC_F19()),
+        VK_F20(NativeKeyCodes.KC_F20()),
+        VK_F21(NativeKeyCodes.KC_F21()),
+        VK_F22(NativeKeyCodes.KC_F22()),
+        VK_F23(NativeKeyCodes.KC_F23()),
+        VK_F24(NativeKeyCodes.KC_F24()),
+        VK_NUMLOCK(NativeKeyCodes.KC_NUMLOCK()),
+        VK_SCROLL(NativeKeyCodes.KC_SCROLL()),
+        VK_LSHIFT(NativeKeyCodes.KC_LSHIFT()),
+        VK_RSHIFT(NativeKeyCodes.KC_RSHIFT()),
+        VK_LCONTROL(NativeKeyCodes.KC_LCONTROL()),
+        VK_RCONTROL(NativeKeyCodes.KC_RCONTROL()),
+        VK_LMENU(NativeKeyCodes.KC_LMENU()),
+        VK_RMENU(NativeKeyCodes.KC_RMENU()),
+        VK_BROWSER_BACK(NativeKeyCodes.KC_BROWSER_BACK()),
+        VK_BROWSER_FORWARD(NativeKeyCodes.KC_BROWSER_FORWARD()),
+        VK_BROWSER_REFRESH(NativeKeyCodes.KC_BROWSER_REFRESH()),
+        VK_BROWSER_STOP(NativeKeyCodes.KC_BROWSER_STOP()),
+        VK_BROWSER_SEARCH(NativeKeyCodes.KC_BROWSER_SEARCH()),
+        VK_BROWSER_FAVORITES(NativeKeyCodes.KC_BROWSER_FAVORITES()),
+        VK_BROWSER_HOME(NativeKeyCodes.KC_BROWSER_HOME()),
+        VK_VOLUME_MUTE(NativeKeyCodes.KC_VOLUME_MUTE()),
+        VK_VOLUME_DOWN(NativeKeyCodes.KC_VOLUME_DOWN()),
+        VK_VOLUME_UP(NativeKeyCodes.KC_VOLUME_UP()),
+        VK_MEDIA_NEXT_TRACK(NativeKeyCodes.KC_MEDIA_NEXT_TRACK()),
+        VK_MEDIA_PREV_TRACK(NativeKeyCodes.KC_MEDIA_PREV_TRACK()),
+        VK_MEDIA_STOP(NativeKeyCodes.KC_MEDIA_STOP()),
+        VK_MEDIA_PLAY_PAUSE(NativeKeyCodes.KC_MEDIA_PLAY_PAUSE()),
+        VK_LAUNCH_MAIL(NativeKeyCodes.KC_LAUNCH_MAIL()),
+        VK_LAUNCH_MEDIA_SELECT(NativeKeyCodes.KC_LAUNCH_MEDIA_SELECT()),
+        VK_LAUNCH_APP1(NativeKeyCodes.KC_LAUNCH_APP1()),
+        VK_LAUNCH_APP2(NativeKeyCodes.KC_LAUNCH_APP2()),
+        VK_OEM_1(NativeKeyCodes.KC_OEM_1()),
+        VK_OEM_PLUS(NativeKeyCodes.KC_OEM_PLUS()),
+        VK_OEM_COMMA(NativeKeyCodes.KC_OEM_COMMA()),
+        VK_OEM_MINUS(NativeKeyCodes.KC_OEM_MINUS()),
+        VK_OEM_PERIOD(NativeKeyCodes.KC_OEM_PERIOD()),
+        VK_OEM_2(NativeKeyCodes.KC_OEM_2()),
+        VK_OEM_3(NativeKeyCodes.KC_OEM_3()),
+        VK_OEM_4(NativeKeyCodes.KC_OEM_4()),
+        VK_OEM_5(NativeKeyCodes.KC_OEM_5()),
+        VK_OEM_6(NativeKeyCodes.KC_OEM_6()),
+        VK_OEM_7(NativeKeyCodes.KC_OEM_7()),
+        VK_OEM_8(NativeKeyCodes.KC_OEM_8()),
+        VK_OEM_102(NativeKeyCodes.KC_OEM_102()),
+        VK_PROCESSKEY(NativeKeyCodes.KC_PROCESSKEY()),
+        VK_PACKET(NativeKeyCodes.KC_PACKET()),
+        VK_ATTN(NativeKeyCodes.KC_ATTN()),
+        VK_CRSEL(NativeKeyCodes.KC_CRSEL()),
+        VK_EXSEL(NativeKeyCodes.KC_EXSEL()),
+        VK_EREOF(NativeKeyCodes.KC_EREOF()),
+        VK_PLAY(NativeKeyCodes.KC_PLAY()),
+        VK_ZOOM(NativeKeyCodes.KC_ZOOM()),
+        VK_NONAME(NativeKeyCodes.KC_NONAME()),
+        VK_PA1(NativeKeyCodes.KC_PA1()),
+        VK_OEM_CLEAR(NativeKeyCodes.KC_OEM_CLEAR());
+
+        private final int nativeKeyCode;
+
+        KeyCode(final int nativeKeyCode) {
+            this.nativeKeyCode = nativeKeyCode;
+        }
+
+        public int getNativeKeyCode () {
+           return nativeKeyCode;
+        }
+
+        private static final Map<Integer, KeyCode> nativeKeyCodeMap = new HashMap<Integer,KeyCode>();
+
+        static {
+            for (final KeyCode keyCode : values()) {
+                nativeKeyCodeMap.put(keyCode.nativeKeyCode, keyCode);
+            }
+        }
+
+        public static KeyCode from(final int nativeKeyCode) {
+            return nativeKeyCodeMap.get(nativeKeyCode);
+        }
+    }
 
     protected GlobalKeyListener listener;
     protected boolean transitionState, altPressed, shiftPressed, ctrlPressed, extendedKey;
-    protected int virtualKeyCode;
+    protected int nativeKeyCode;
 
     public KeyEvent(final Object source,
                     final GlobalKeyListener listener,
                     final boolean transitionState,
-                    final int virtualKeyCode,
+                    final int nativeKeyCode,
                     final boolean altPressed,
                     final boolean shiftPressed,
                     final boolean ctrlPressed,
@@ -85,7 +264,7 @@ public class KeyEvent extends EventObject {
         super(source);
         this.listener = listener;
         this.transitionState = transitionState;
-        this.virtualKeyCode = virtualKeyCode;
+        this.nativeKeyCode = nativeKeyCode;
         this.altPressed = altPressed;
         this.shiftPressed = shiftPressed;
         this.ctrlPressed = ctrlPressed;
@@ -96,8 +275,8 @@ public class KeyEvent extends EventObject {
         return transitionState;
     }
 
-    public int getVirtualKeyCode() {
-        return virtualKeyCode;
+    public int getNativeKeyCode() {
+        return nativeKeyCode;
     }
 
     public boolean isAltPressed() {
@@ -117,13 +296,13 @@ public class KeyEvent extends EventObject {
     }
 
     public boolean equals(final KeyEvent event) {
-        return event.getVirtualKeyCode() == virtualKeyCode && event.isExtendedKey() == extendedKey
+        return event.getNativeKeyCode() == nativeKeyCode && event.isExtendedKey() == extendedKey
                         && event.isAltPressed() == altPressed;
     }
 
     @Override
     public String toString() {
-        final StringBuilder string = new StringBuilder().append(virtualKeyCode)
+        final StringBuilder string = new StringBuilder().append(nativeKeyCode)
                                                         .append(" [")
                                                         .append(transitionState ? "down" : "up");
         if (altPressed) {

@@ -1,4 +1,18 @@
 /*
+ * Copyright (c) 2016 Brian Groenke
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation
+ * files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy,
+ * modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software
+ * is furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
+ * WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+ * COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+ * ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ * ----------------------------------------------------------------------------------------------------------------------------
  * Copyright 2011 Kristian Kraljic, Johannes Sch�th 2008. All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without modification, are
@@ -32,6 +46,8 @@ import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
+import de.ksquared.system.keyboard.KeyEvent.KeyCode;
+
 class KeyboardHook {
 
     private boolean altPressed, shiftPressed, ctrlPressed, extendedKey;
@@ -45,12 +61,12 @@ class KeyboardHook {
         }
     }
 
-    void processKey(final boolean transitionState, final int virtualKeyCode, final GlobalKeyListener listener) {
-        processControlKeys(transitionState, virtualKeyCode);
+    void processKey(final boolean transitionState, final int nativeKeyCode, final GlobalKeyListener listener) {
+        processControlKeys(transitionState, nativeKeyCode);
         buffer.add(new KeyEvent(this,
                                 listener,
                                 transitionState,
-                                virtualKeyCode,
+                                nativeKeyCode,
                                 altPressed,
                                 shiftPressed,
                                 ctrlPressed,
@@ -61,29 +77,31 @@ class KeyboardHook {
 
     native void unregisterHook();
 
-    void processControlKeys(final boolean transitionState, final int virtualKeyCode) {
-        switch (virtualKeyCode) {
-        case KeyEvent.VK_RWIN:
+    void processControlKeys(final boolean transitionState, final int nativeKeyCode) {
+        final KeyCode keyCode = KeyCode.from(nativeKeyCode);
+        switch (keyCode) {
+        case VK_RWIN:
             extendedKey = transitionState;
             break;
-        case KeyEvent.VK_RMENU:
+        case VK_RMENU:
             extendedKey = transitionState;
-        case KeyEvent.VK_MENU:
-        case KeyEvent.VK_LMENU:
+        case VK_MENU:
+        case VK_LMENU:
             altPressed = transitionState;
             break;
-        case KeyEvent.VK_RSHIFT:
+        case VK_RSHIFT:
             extendedKey = transitionState;
-        case KeyEvent.VK_SHIFT:
-        case KeyEvent.VK_LSHIFT:
+        case VK_SHIFT:
+        case VK_LSHIFT:
             shiftPressed = transitionState;
             break;
-        case KeyEvent.VK_RCONTROL:
+        case VK_RCONTROL:
             extendedKey = transitionState;
-        case KeyEvent.VK_CONTROL:
-        case KeyEvent.VK_LCONTROL:
+        case VK_CONTROL:
+        case VK_LCONTROL:
             ctrlPressed = transitionState;
             break;
+        default:
         }
     }
 }
