@@ -80,7 +80,7 @@ class KeyboardHook {
     void processControlKeys(final boolean transitionState, final int nativeKeyCode) {
         final KeyCode keyCode = KeyCode.from(nativeKeyCode);
         switch (keyCode) {
-        case VK_RWIN:
+        case VK_RMETA:
             extendedKey = transitionState;
             break;
         case VK_RMENU:

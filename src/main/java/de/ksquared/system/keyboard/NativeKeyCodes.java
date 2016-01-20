@@ -178,9 +178,9 @@ class NativeKeyCodes {
 
     static native int KC_Z();
 
-    static native int KC_LWIN();
+    static native int KC_LMETA();
 
-    static native int KC_RWIN();
+    static native int KC_RMETA();
 
     static native int KC_APPS();
 

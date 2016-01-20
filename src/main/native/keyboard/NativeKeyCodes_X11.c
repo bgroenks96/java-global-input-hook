@@ -23,9 +23,8 @@
  * Method:    KC_UNDEFINED
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_UNDEFINED
-  (JNIEnv *, jclass) {
-  return (jint) UNDEF;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_UNDEFINED(JNIEnv *, jclass) {
+    return (jint)UNDEF;
 }
 
 /*
@@ -33,9 +32,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_UNDEFI
  * Method:    KC_LBUTTON
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1LBUTTON
-  (JNIEnv *, jclass) {
-  return (jint) XKeysymToKeycode(XK_Pointer_Button1);
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1LBUTTON(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_Pointer_Button1);
 }
 
 /*
@@ -43,9 +41,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1LBUTT
  * Method:    KC_RBUTTON
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1RBUTTON
-  (JNIEnv *, jclass) {
-  return (jint) XKeysymToKeycode(XK_Pointer_Button2);
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1RBUTTON(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_Pointer_Button2);
 }
 
 /*
@@ -53,9 +50,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1RBUTT
  * Method:    KC_CANCEL
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1CANCEL
-  (JNIEnv *, jclass) {
-  return (jint) XKeysymToKeycode(XK_Cancel);
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1CANCEL(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_Cancel);
 }
 
 /*
@@ -63,9 +59,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1CANCE
  * Method:    KC_MBUTTON
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1MBUTTON
-  (JNIEnv *, jclass) {
-  return (jint) XKeysymToKeycode(XK_Pointer_Button3);
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1MBUTTON(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_Pointer_Button3);
 }
 
 /*
@@ -73,9 +68,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1MBUTT
  * Method:    KC_XBUTTON1
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1XBUTTON1
-  (JNIEnv *, jclass) {
-  return (jint) XKeysymToKeycode(XK_Pointer_Button4);
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1XBUTTON1(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_Pointer_Button4);
 }
 
 /*
@@ -83,9 +77,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1XBUTT
  * Method:    KC_XBUTTON2
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1XBUTTON2
-  (JNIEnv *, jclass) {
-  return (jint) XKeysymToKeycode(XK_Pointer_Button5);
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1XBUTTON2(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_Pointer_Button5);
 }
 
 /*
@@ -93,9 +86,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1XBUTT
  * Method:    KC_BACK
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1BACK
-  (JNIEnv *, jclass) {
-  return (jint) XKeysymToKeycode(XK_BackSpace);
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1BACK(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_BackSpace);
 }
 
 /*
@@ -103,9 +95,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1BACK
  * Method:    KC_TAB
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1TAB
-  (JNIEnv *, jclass) {
-  return (jint) XKeysymToKeycode(XK_Tab);
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1TAB(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_Tab);
 }
 
 /*
@@ -113,9 +104,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1TAB
  * Method:    KC_CLEAR
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1CLEAR
-  (JNIEnv *, jclass) {
-  return (jint) XKeysymToKeycode(XK_Clear);
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1CLEAR(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_Clear);
 }
 
 /*
@@ -123,9 +113,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1CLEAR
  * Method:    KC_RETURN
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1RETURN
-  (JNIEnv *, jclass) {
-  return (jint) XKeysymToKeycode(XK_Return);
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1RETURN(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_Return);
 }
 
 /*
@@ -133,9 +122,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1RETUR
  * Method:    KC_SHIFT
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1SHIFT
-  (JNIEnv *, jclass) {
-  return (jint) XKeysymToKeycode(XK_Shift);
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1SHIFT(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_Shift);
 }
 
 /*
@@ -143,9 +131,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1SHIFT
  * Method:    KC_CONTROL
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1CONTROL
-  (JNIEnv *, jclass) {
-  return (jint) VK_CONTROL;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1CONTROL(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_Control_L);
 }
 
 /*
@@ -153,9 +140,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1CONTR
  * Method:    KC_MENU
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1MENU
-  (JNIEnv *, jclass) {
-  return (jint) VK_MENU;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1MENU(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_Menu);
 }
 
 /*
@@ -163,9 +149,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1MENU
  * Method:    KC_PAUSE
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1PAUSE
-  (JNIEnv *, jclass) {
-  return (jint) VK_PAUSE;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1PAUSE(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_Pause);
 }
 
 /*
@@ -173,9 +158,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1PAUSE
  * Method:    KC_CAPITAL
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1CAPITAL
-  (JNIEnv *, jclass) {
-  return (jint) VK_CAPITAL;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1CAPITAL(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_Caps_Lock);
 }
 
 /*
@@ -183,9 +167,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1CAPIT
  * Method:    KC_KANA
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1KANA
-  (JNIEnv *, jclass) {
-  return (jint) VK_KANA;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1KANA(JNIEnv *, jclass) {
+    return (jint) XKeysysToKeycode(XK_kana_switch);
 }
 
 /*
@@ -193,9 +176,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1KANA
  * Method:    KC_HANGUEL
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1HANGUEL
-  (JNIEnv *, jclass) {
-  return (jint) VK_HANGUEL;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1HANGUEL(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_Hangul);
 }
 
 /*
@@ -203,9 +185,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1HANGU
  * Method:    KC_HANGUL
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1HANGUL
-  (JNIEnv *, jclass) {
-  return (jint) VK_HANGUL;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1HANGUL(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_Hangul);
 }
 
 /*
@@ -213,9 +194,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1HANGU
  * Method:    KC_JUNJA
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1JUNJA
-  (JNIEnv *, jclass) {
-  return (jint) VK_JUNJA;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1JUNJA(JNIEnv *, jclass) {
+    return (jint)UNDEF;
 }
 
 /*
@@ -223,9 +203,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1JUNJA
  * Method:    KC_FINAL
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1FINAL
-  (JNIEnv *, jclass) {
-  return (jint) VK_FINAL;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1FINAL(JNIEnv *, jclass) {
+    return (jint)UNDEF;
 }
 
 /*
@@ -233,9 +212,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1FINAL
  * Method:    KC_HANJA
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1HANJA
-  (JNIEnv *, jclass) {
-  return (jint) VK_HANJA;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1HANJA(JNIEnv *, jclass) {
+    return (jint)UNDEF;
 }
 
 /*
@@ -243,9 +221,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1HANJA
  * Method:    KC_KANJI
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1KANJI
-  (JNIEnv *, jclass) {
-  return (jint) VK_KANJI;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1KANJI(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_Kanji);
 }
 
 /*
@@ -253,9 +230,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1KANJI
  * Method:    KC_ESCAPE
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1ESCAPE
-  (JNIEnv *, jclass) {
-  return (jint) VK_ESCAPE;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1ESCAPE(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_Escape);
 }
 
 /*
@@ -263,9 +239,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1ESCAP
  * Method:    KC_CONVERT
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1CONVERT
-  (JNIEnv *, jclass) {
-  return (jint) VK_CONVERT;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1CONVERT(JNIEnv *, jclass) {
+    return (jint)UNDEF;
 }
 
 /*
@@ -273,9 +248,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1CONVE
  * Method:    KC_NONCONVERT
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1NONCONVERT
-  (JNIEnv *, jclass) {
-  return (jint) VK_NONCONVERT;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1NONCONVERT(JNIEnv *, jclass) {
+    return (jint)UNDEF;
 }
 
 /*
@@ -283,9 +257,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1NONCO
  * Method:    KC_ACCEPT
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1ACCEPT
-  (JNIEnv *, jclass) {
-  return (jint) VK_ACCEPT;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1ACCEPT(JNIEnv *, jclass) {
+    return (jint)UNDEF;
 }
 
 /*
@@ -293,9 +266,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1ACCEP
  * Method:    KC_MODECHANGE
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1MODECHANGE
-  (JNIEnv *, jclass) {
-  return (jint) VK_MODECHANGE;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1MODECHANGE(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_Mode_switch);
 }
 
 /*
@@ -303,9 +275,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1MODEC
  * Method:    KC_SPACE
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1SPACE
-  (JNIEnv *, jclass) {
-  return (jint) VK_SPACE;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1SPACE(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_space);
 }
 
 /*
@@ -313,9 +284,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1SPACE
  * Method:    KC_PRIOR
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1PRIOR
-  (JNIEnv *, jclass) {
-  return (jint) VK_PRIOR;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1PRIOR(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_Prior);
 }
 
 /*
@@ -323,9 +293,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1PRIOR
  * Method:    KC_NEXT
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1NEXT
-  (JNIEnv *, jclass) {
-  return (jint) VK_NEXT;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1NEXT(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_Next);
 }
 
 /*
@@ -333,9 +302,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1NEXT
  * Method:    KC_END
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1END
-  (JNIEnv *, jclass) {
-  return (jint) VK_END;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1END(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_End);
 }
 
 /*
@@ -343,9 +311,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1END
  * Method:    KC_HOME
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1HOME
-  (JNIEnv *, jclass) {
-  return (jint) VK_HOME;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1HOME(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_Home);
 }
 
 /*
@@ -353,9 +320,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1HOME
  * Method:    KC_LEFT
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1LEFT
-  (JNIEnv *, jclass) {
-  return (jint) VK_LEFT;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1LEFT(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_Left);
 }
 
 /*
@@ -363,9 +329,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1LEFT
  * Method:    KC_UP
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1UP
-  (JNIEnv *, jclass) {
-  return (jint) VK_UP;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1UP(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_Up);
 }
 
 /*
@@ -373,9 +338,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1UP
  * Method:    KC_RIGHT
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1RIGHT
-  (JNIEnv *, jclass) {
-  return (jint) VK_RIGHT;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1RIGHT(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_Right);
 }
 
 /*
@@ -383,9 +347,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1RIGHT
  * Method:    KC_DOWN
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1DOWN
-  (JNIEnv *, jclass) {
-  return (jint) VK_DOWN;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1DOWN(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_Down);
 }
 
 /*
@@ -393,9 +356,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1DOWN
  * Method:    KC_SELECT
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1SELECT
-  (JNIEnv *, jclass) {
-  return (jint) VK_SELECT;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1SELECT(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_Select);
 }
 
 /*
@@ -403,9 +365,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1SELEC
  * Method:    KC_PRINT
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1PRINT
-  (JNIEnv *, jclass) {
-  return (jint) VK_PRINT;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1PRINT(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_Print);
 }
 
 /*
@@ -413,9 +374,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1PRINT
  * Method:    KC_EXECUTE
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1EXECUTE
-  (JNIEnv *, jclass) {
-  return (jint) VK_EXECUTE;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1EXECUTE(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_Execute);
 }
 
 /*
@@ -423,9 +383,12 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1EXECU
  * Method:    KC_SNAPSHOT
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1SNAPSHOT
-  (JNIEnv *, jclass) {
-  return (jint) VK_SNAPSHOT;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1SNAPSHOT(JNIEnv *, jclass) {
+#ifdef XK_3270
+    return (jint) XKeysymToKeycode(XK_3270_PrintScreen);
+#else
+    return (jint)UNDEF;
+#endif
 }
 
 /*
@@ -433,9 +396,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1SNAPS
  * Method:    KC_INSERT
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1INSERT
-  (JNIEnv *, jclass) {
-  return (jint) VK_INSERT;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1INSERT(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_Insert);
 }
 
 /*
@@ -443,9 +405,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1INSER
  * Method:    KC_DELETE
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1DELETE
-  (JNIEnv *, jclass) {
-  return (jint) VK_DELETE;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1DELETE(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_Delete);
 }
 
 /*
@@ -453,9 +414,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1DELET
  * Method:    KC_HELP
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1HELP
-  (JNIEnv *, jclass) {
-  return (jint) VK_HELP;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1HELP(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_Help);
 }
 
 /*
@@ -463,9 +423,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1HELP
  * Method:    KC_0
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_10
-  (JNIEnv *, jclass) {
-  return (jint) VK_0;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_10(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_0);
 }
 
 /*
@@ -473,9 +432,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_10
  * Method:    KC_1
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_11
-  (JNIEnv *, jclass) {
-  return (jint) VK_1;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_11(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_1);
 }
 
 /*
@@ -483,9 +441,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_11
  * Method:    KC_2
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_12
-  (JNIEnv *, jclass) {
-  return (jint) VK_2;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_12(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_2);
 }
 
 /*
@@ -493,9 +450,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_12
  * Method:    KC_3
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_13
-  (JNIEnv *, jclass) {
-  return (jint) VK_3;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_13(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_3);
 }
 
 /*
@@ -503,9 +459,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_13
  * Method:    KC_4
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_14
-  (JNIEnv *, jclass) {
-  return (jint) VK_4;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_14(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_4);
 }
 
 /*
@@ -513,9 +468,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_14
  * Method:    KC_5
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_15
-  (JNIEnv *, jclass) {
-  return (jint) VK_5;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_15(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_5);
 }
 
 /*
@@ -523,9 +477,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_15
  * Method:    KC_6
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_16
-  (JNIEnv *, jclass) {
-  return (jint) VK_6;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_16(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_6);
 }
 
 /*
@@ -533,9 +486,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_16
  * Method:    KC_7
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_17
-  (JNIEnv *, jclass) {
-  return (jint) VK_7;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_17(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_7);
 }
 
 /*
@@ -543,9 +495,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_17
  * Method:    KC_8
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_18
-  (JNIEnv *, jclass) {
-  return (jint) VK_8;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_18(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_8);
 }
 
 /*
@@ -553,9 +504,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_18
  * Method:    KC_9
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_19
-  (JNIEnv *, jclass) {
-  return (jint) VK_9;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_19(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_9);
 }
 
 /*
@@ -563,9 +513,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_19
  * Method:    KC_A
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1A
-  (JNIEnv *, jclass) {
-  return (jint) VK_A;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1A(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_A);
 }
 
 /*
@@ -573,9 +522,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1A
  * Method:    KC_B
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1B
-  (JNIEnv *, jclass) {
-  return (jint) VK_B;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1B(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_B);
 }
 
 /*
@@ -583,9 +531,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1B
  * Method:    KC_C
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1C
-  (JNIEnv *, jclass) {
-  return (jint) VK_C;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1C(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_C);
 }
 
 /*
@@ -593,9 +540,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1C
  * Method:    KC_D
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1D
-  (JNIEnv *, jclass) {
-  return (jint) VK_D;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1D(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_D);
 }
 
 /*
@@ -603,9 +549,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1D
  * Method:    KC_E
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1E
-  (JNIEnv *, jclass) {
-  return (jint) VK_E;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1E(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_E);
 }
 
 /*
@@ -613,9 +558,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1E
  * Method:    KC_F
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1F
-  (JNIEnv *, jclass) {
-  return (jint) VK_F;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1F(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_F);
 }
 
 /*
@@ -623,9 +567,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1F
  * Method:    KC_G
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1G
-  (JNIEnv *, jclass) {
-  return (jint) VK_G;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1G(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_G);
 }
 
 /*
@@ -633,9 +576,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1G
  * Method:    KC_H
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1H
-  (JNIEnv *, jclass) {
-  return (jint) VK_H;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1H(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_H);
 }
 
 /*
@@ -643,9 +585,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1H
  * Method:    KC_I
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1I
-  (JNIEnv *, jclass) {
-  return (jint) VK_I;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1I(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_I);
 }
 
 /*
@@ -653,9 +594,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1I
  * Method:    KC_J
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1J
-  (JNIEnv *, jclass) {
-  return (jint) VK_J;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1J(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_J);
 }
 
 /*
@@ -663,9 +603,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1J
  * Method:    KC_K
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1K
-  (JNIEnv *, jclass) {
-  return (jint) VK_K;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1K(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_K);
 }
 
 /*
@@ -673,9 +612,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1K
  * Method:    KC_L
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1L
-  (JNIEnv *, jclass) {
-  return (jint) VK_L;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1L(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_L);
 }
 
 /*
@@ -683,9 +621,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1L
  * Method:    KC_M
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1M
-  (JNIEnv *, jclass) {
-  return (jint) VK_M;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1M(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_M);
 }
 
 /*
@@ -693,9 +630,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1M
  * Method:    KC_N
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1N
-  (JNIEnv *, jclass) {
-  return (jint) VK_N;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1N(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(N);
 }
 
 /*
@@ -703,9 +639,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1N
  * Method:    KC_O
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1O
-  (JNIEnv *, jclass) {
-  return (jint) VK_O;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1O(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_O);
 }
 
 /*
@@ -713,9 +648,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1O
  * Method:    KC_P
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1P
-  (JNIEnv *, jclass) {
-  return (jint) VK_P;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1P(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_P);
 }
 
 /*
@@ -723,9 +657,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1P
  * Method:    KC_Q
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1Q
-  (JNIEnv *, jclass) {
-  return (jint) VK_Q;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1Q(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_Q);
 }
 
 /*
@@ -733,9 +666,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1Q
  * Method:    KC_R
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1R
-  (JNIEnv *, jclass) {
-  return (jint) VK_R;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1R(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_R);
 }
 
 /*
@@ -743,9 +675,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1R
  * Method:    KC_S
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1S
-  (JNIEnv *, jclass) {
-  return (jint) VK_S;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1S(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_S);
 }
 
 /*
@@ -753,9 +684,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1S
  * Method:    KC_T
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1T
-  (JNIEnv *, jclass) {
-  return (jint) VK_T;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1T(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_T);
 }
 
 /*
@@ -763,9 +693,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1T
  * Method:    KC_U
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1U
-  (JNIEnv *, jclass) {
-  return (jint) VK_U;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1U(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_U);
 }
 
 /*
@@ -773,9 +702,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1U
  * Method:    KC_V
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1V
-  (JNIEnv *, jclass) {
-  return (jint) VK_V;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1V(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_V);
 }
 
 /*
@@ -783,9 +711,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1V
  * Method:    KC_W
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1W
-  (JNIEnv *, jclass) {
-  return (jint) VK_W;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1W(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_W);
 }
 
 /*
@@ -793,9 +720,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1W
  * Method:    KC_X
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1X
-  (JNIEnv *, jclass) {
-  return (jint) VK_X;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1X(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_X);
 }
 
 /*
@@ -803,9 +729,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1X
  * Method:    KC_Y
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1Y
-  (JNIEnv *, jclass) {
-  return (jint) VK_Y;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1Y(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_Y);
 }
 
 /*
@@ -813,29 +738,26 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1Y
  * Method:    KC_Z
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1Z
-  (JNIEnv *, jclass) {
-  return (jint) VK_Z;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1Z(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_Z);
 }
 
 /*
  * Class:     de_ksquared_system_keyboard_NativeKeyCodes
- * Method:    KC_LWIN
+ * Method:    KC_LMETA
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1LWIN
-  (JNIEnv *, jclass) {
-  return (jint) VK_LWIN;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1LMETA(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_Meta_L);
 }
 
 /*
  * Class:     de_ksquared_system_keyboard_NativeKeyCodes
- * Method:    KC_RWIN
+ * Method:    KC_RMETA
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1RWIN
-  (JNIEnv *, jclass) {
-  return (jint) VK_RWIN;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1RMETA(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_Meta_R);
 }
 
 /*
@@ -843,9 +765,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1RWIN
  * Method:    KC_APPS
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1APPS
-  (JNIEnv *, jclass) {
-  return (jint) VK_APPS;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1APPS(JNIEnv *, jclass) {
+    return (jint)UNDEF;
 }
 
 /*
@@ -853,9 +774,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1APPS
  * Method:    KC_SLEEP
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1SLEEP
-  (JNIEnv *, jclass) {
-  return (jint) VK_SLEEP;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1SLEEP(JNIEnv *, jclass) {
+    return (jint)UNDEF;
 }
 
 /*
@@ -863,9 +783,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1SLEEP
  * Method:    KC_NUMPAD0
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1NUMPAD0
-  (JNIEnv *, jclass) {
-  return (jint) VK_NUMPAD0;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1NUMPAD0(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_KP_0);
 }
 
 /*
@@ -873,9 +792,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1NUMPA
  * Method:    KC_NUMPAD1
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1NUMPAD1
-  (JNIEnv *, jclass) {
-  return (jint) VK_NUMPAD1;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1NUMPAD1(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_KP_1);
 }
 
 /*
@@ -883,9 +801,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1NUMPA
  * Method:    KC_NUMPAD2
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1NUMPAD2
-  (JNIEnv *, jclass) {
-  return (jint) VK_NUMPAD2;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1NUMPAD2(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_KP_2);
 }
 
 /*
@@ -893,9 +810,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1NUMPA
  * Method:    KC_NUMPAD3
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1NUMPAD3
-  (JNIEnv *, jclass) {
-  return (jint) VK_NUMPAD3;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1NUMPAD3(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_KP_3);
 }
 
 /*
@@ -903,9 +819,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1NUMPA
  * Method:    KC_NUMPAD4
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1NUMPAD4
-  (JNIEnv *, jclass) {
-  return (jint) VK_NUMPAD4;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1NUMPAD4(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_KP_4);
 }
 
 /*
@@ -913,9 +828,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1NUMPA
  * Method:    KC_NUMPAD5
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1NUMPAD5
-  (JNIEnv *, jclass) {
-  return (jint) VK_NUMPAD5;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1NUMPAD5(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_KP_5);
 }
 
 /*
@@ -923,9 +837,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1NUMPA
  * Method:    KC_NUMPAD6
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1NUMPAD6
-  (JNIEnv *, jclass) {
-  return (jint) VK_NUMPAD6;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1NUMPAD6(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_KP_6);
 }
 
 /*
@@ -933,9 +846,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1NUMPA
  * Method:    KC_NUMPAD7
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1NUMPAD7
-  (JNIEnv *, jclass) {
-  return (jint) VK_NUMPAD7;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1NUMPAD7(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_KP_7);
 }
 
 /*
@@ -943,9 +855,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1NUMPA
  * Method:    KC_NUMPAD8
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1NUMPAD8
-  (JNIEnv *, jclass) {
-  return (jint) VK_NUMPAD8;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1NUMPAD8(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_KP_8);
 }
 
 /*
@@ -953,9 +864,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1NUMPA
  * Method:    KC_NUMPAD9
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1NUMPAD9
-  (JNIEnv *, jclass) {
-  return (jint) VK_NUMPAD9;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1NUMPAD9(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_KP_9);
 }
 
 /*
@@ -963,9 +873,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1NUMPA
  * Method:    KC_MULTIPLY
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1MULTIPLY
-  (JNIEnv *, jclass) {
-  return (jint) VK_MULTIPLY;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1MULTIPLY(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_KP_Multiply);
 }
 
 /*
@@ -973,9 +882,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1MULTI
  * Method:    KC_ADD
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1ADD
-  (JNIEnv *, jclass) {
-  return (jint) VK_ADD;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1ADD(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_KP_Add);
 }
 
 /*
@@ -983,9 +891,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1ADD
  * Method:    KC_SEPARATOR
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1SEPARATOR
-  (JNIEnv *, jclass) {
-  return (jint) VK_SEPARATOR;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1SEPARATOR(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_KP_Separator);
 }
 
 /*
@@ -993,9 +900,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1SEPAR
  * Method:    KC_SUBTRACT
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1SUBTRACT
-  (JNIEnv *, jclass) {
-  return (jint) VK_SUBTRACT;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1SUBTRACT(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_KP_Subtract);
 }
 
 /*
@@ -1003,9 +909,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1SUBTR
  * Method:    KC_DECIMAL
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1DECIMAL
-  (JNIEnv *, jclass) {
-  return (jint) VK_DECIMAL;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1DECIMAL(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_KP_Decimal);
 }
 
 /*
@@ -1013,9 +918,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1DECIM
  * Method:    KC_DIVIDE
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1DIVIDE
-  (JNIEnv *, jclass) {
-  return (jint) VK_DIVIDE;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1DIVIDE(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_KP_Divide);
 }
 
 /*
@@ -1023,9 +927,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1DIVID
  * Method:    KC_F1
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1F1
-  (JNIEnv *, jclass) {
-  return (jint) VK_F1;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1F1(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_F1);
 }
 
 /*
@@ -1033,9 +936,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1F1
  * Method:    KC_F2
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1F2
-  (JNIEnv *, jclass) {
-  return (jint) VK_F2;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1F2(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_F2);
 }
 
 /*
@@ -1043,9 +945,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1F2
  * Method:    KC_F3
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1F3
-  (JNIEnv *, jclass) {
-  return (jint) VK_F3;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1F3(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_F3);
 }
 
 /*
@@ -1053,9 +954,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1F3
  * Method:    KC_F4
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1F4
-  (JNIEnv *, jclass) {
-  return (jint) VK_F4;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1F4(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_F4);
 }
 
 /*
@@ -1063,9 +963,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1F4
  * Method:    KC_F5
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1F5
-  (JNIEnv *, jclass) {
-  return (jint) VK_F5;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1F5(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_F5);
 }
 
 /*
@@ -1073,9 +972,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1F5
  * Method:    KC_F6
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1F6
-  (JNIEnv *, jclass) {
-  return (jint) VK_F6;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1F6(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_F6);
 }
 
 /*
@@ -1083,9 +981,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1F6
  * Method:    KC_F7
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1F7
-  (JNIEnv *, jclass) {
-  return (jint) VK_F7;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1F7(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_F7);
 }
 
 /*
@@ -1093,9 +990,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1F7
  * Method:    KC_F8
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1F8
-  (JNIEnv *, jclass) {
-  return (jint) VK_F8;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1F8(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_F8);
 }
 
 /*
@@ -1103,9 +999,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1F8
  * Method:    KC_F9
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1F9
-  (JNIEnv *, jclass) {
-  return (jint) VK_F9;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1F9(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_F9);
 }
 
 /*
@@ -1113,9 +1008,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1F9
  * Method:    KC_F10
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1F10
-  (JNIEnv *, jclass) {
-  return (jint) VK_F10;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1F10(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_F10);
 }
 
 /*
@@ -1123,9 +1017,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1F10
  * Method:    KC_F11
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1F11
-  (JNIEnv *, jclass) {
-  return (jint) VK_F11;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1F11(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_F11);
 }
 
 /*
@@ -1133,9 +1026,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1F11
  * Method:    KC_F12
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1F12
-  (JNIEnv *, jclass) {
-  return (jint) VK_F12;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1F12(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_F12);
 }
 
 /*
@@ -1143,9 +1035,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1F12
  * Method:    KC_F13
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1F13
-  (JNIEnv *, jclass) {
-  return (jint) VK_F13;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1F13(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_F13);
 }
 
 /*
@@ -1153,9 +1044,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1F13
  * Method:    KC_F14
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1F14
-  (JNIEnv *, jclass) {
-  return (jint) VK_F14;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1F14(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_F14);
 }
 
 /*
@@ -1163,9 +1053,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1F14
  * Method:    KC_F15
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1F15
-  (JNIEnv *, jclass) {
-  return (jint) VK_F15;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1F15(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_F15);
 }
 
 /*
@@ -1173,9 +1062,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1F15
  * Method:    KC_F16
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1F16
-  (JNIEnv *, jclass) {
-  return (jint) VK_F16;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1F16(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_F16);
 }
 
 /*
@@ -1183,9 +1071,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1F16
  * Method:    KC_F17
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1F17
-  (JNIEnv *, jclass) {
-  return (jint) VK_F17;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1F17(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_F17);
 }
 
 /*
@@ -1193,9 +1080,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1F17
  * Method:    KC_F18
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1F18
-  (JNIEnv *, jclass) {
-  return (jint) VK_F18;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1F18(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_F18);
 }
 
 /*
@@ -1203,9 +1089,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1F18
  * Method:    KC_F19
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1F19
-  (JNIEnv *, jclass) {
-  return (jint) VK_F19;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1F19(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_F19);
 }
 
 /*
@@ -1213,9 +1098,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1F19
  * Method:    KC_F20
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1F20
-  (JNIEnv *, jclass) {
-  return (jint) VK_F20;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1F20(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_F20);
 }
 
 /*
@@ -1223,9 +1107,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1F20
  * Method:    KC_F21
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1F21
-  (JNIEnv *, jclass) {
-  return (jint) VK_F21;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1F21(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_F21);
 }
 
 /*
@@ -1233,9 +1116,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1F21
  * Method:    KC_F22
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1F22
-  (JNIEnv *, jclass) {
-  return (jint) VK_F22;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1F22(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_F22);
 }
 
 /*
@@ -1243,9 +1125,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1F22
  * Method:    KC_F23
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1F23
-  (JNIEnv *, jclass) {
-  return (jint) VK_F23;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1F23(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_F23);
 }
 
 /*
@@ -1253,9 +1134,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1F23
  * Method:    KC_F24
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1F24
-  (JNIEnv *, jclass) {
-  return (jint) VK_F24;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1F24(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_F24);
 }
 
 /*
@@ -1263,9 +1143,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1F24
  * Method:    KC_NUMLOCK
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1NUMLOCK
-  (JNIEnv *, jclass) {
-  return (jint) VK_NUMLOCK;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1NUMLOCK(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_Num_Lock);
 }
 
 /*
@@ -1273,9 +1152,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1NUMLO
  * Method:    KC_SCROLL
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1SCROLL
-  (JNIEnv *, jclass) {
-  return (jint) VK_SCROLL;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1SCROLL(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_Scroll_Lock);
 }
 
 /*
@@ -1283,9 +1161,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1SCROL
  * Method:    KC_LSHIFT
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1LSHIFT
-  (JNIEnv *, jclass) {
-  return (jint) VK_LSHIFT;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1LSHIFT(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_Shift_L);
 }
 
 /*
@@ -1293,9 +1170,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1LSHIF
  * Method:    KC_RSHIFT
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1RSHIFT
-  (JNIEnv *, jclass) {
-  return (jint) VK_RSHIFT;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1RSHIFT(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_Shift_R);
 }
 
 /*
@@ -1303,9 +1179,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1RSHIF
  * Method:    KC_LCONTROL
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1LCONTROL
-  (JNIEnv *, jclass) {
-  return (jint) VK_LCONTROL;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1LCONTROL(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_Control_L);
 }
 
 /*
@@ -1313,9 +1188,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1LCONT
  * Method:    KC_RCONTROL
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1RCONTROL
-  (JNIEnv *, jclass) {
-  return (jint) VK_RCONTROL;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1RCONTROL(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_Control_R);
 }
 
 /*
@@ -1323,9 +1197,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1RCONT
  * Method:    KC_LMENU
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1LMENU
-  (JNIEnv *, jclass) {
-  return (jint) VK_LMENU;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1LMENU(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_Alt_L);
 }
 
 /*
@@ -1333,9 +1206,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1LMENU
  * Method:    KC_RMENU
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1RMENU
-  (JNIEnv *, jclass) {
-  return (jint) VK_RMENU;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1RMENU(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_Alt_R);
 }
 
 /*
@@ -1343,9 +1215,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1RMENU
  * Method:    KC_BROWSER_BACK
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1BROWSER_1BACK
-  (JNIEnv *, jclass) {
-  return (jint) VK_BROWSER_BACK;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1BROWSER_1BACK(JNIEnv *, jclass) {
+    return (jint)UNDEF;
 }
 
 /*
@@ -1353,9 +1224,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1BROWS
  * Method:    KC_BROWSER_FORWARD
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1BROWSER_1FORWARD
-  (JNIEnv *, jclass) {
-  return (jint) VK_BROWSER_FORWARD;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1BROWSER_1FORWARD(JNIEnv *, jclass) {
+    return (jint)UNDEF;
 }
 
 /*
@@ -1363,9 +1233,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1BROWS
  * Method:    KC_BROWSER_REFRESH
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1BROWSER_1REFRESH
-  (JNIEnv *, jclass) {
-  return (jint) VK_BROWSER_REFRESH;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1BROWSER_1REFRESH(JNIEnv *, jclass) {
+    return (jint)UNDEF;
 }
 
 /*
@@ -1373,9 +1242,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1BROWS
  * Method:    KC_BROWSER_STOP
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1BROWSER_1STOP
-  (JNIEnv *, jclass) {
-  return (jint) VK_BROWSER_STOP;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1BROWSER_1STOP(JNIEnv *, jclass) {
+    return (jint)UNDEF;
 }
 
 /*
@@ -1383,9 +1251,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1BROWS
  * Method:    KC_BROWSER_SEARCH
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1BROWSER_1SEARCH
-  (JNIEnv *, jclass) {
-  return (jint) VK_BROWSER_SEARCH;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1BROWSER_1SEARCH(JNIEnv *, jclass) {
+    return (jint)UNDEF;
 }
 
 /*
@@ -1393,9 +1260,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1BROWS
  * Method:    KC_BROWSER_FAVORITES
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1BROWSER_1FAVORITES
-  (JNIEnv *, jclass) {
-  return (jint) VK_BROWSER_FAVORITES;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1BROWSER_1FAVORITES(JNIEnv *, jclass) {
+    return (jint)UNDEF;
 }
 
 /*
@@ -1403,9 +1269,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1BROWS
  * Method:    KC_BROWSER_HOME
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1BROWSER_1HOME
-  (JNIEnv *, jclass) {
-  return (jint) VK_BROWSER_HOME;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1BROWSER_1HOME(JNIEnv *, jclass) {
+    return (jint)UNDEF;
 }
 
 /*
@@ -1413,9 +1278,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1BROWS
  * Method:    KC_VOLUME_MUTE
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1VOLUME_1MUTE
-  (JNIEnv *, jclass) {
-  return (jint) VK_VOLUME_MUTE;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1VOLUME_1MUTE(JNIEnv *, jclass) {
+    return (jint)UNDEF;
 }
 
 /*
@@ -1423,9 +1287,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1VOLUM
  * Method:    KC_VOLUME_DOWN
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1VOLUME_1DOWN
-  (JNIEnv *, jclass) {
-  return (jint) VK_VOLUME_DOWN;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1VOLUME_1DOWN(JNIEnv *, jclass) {
+    return (jint)UNDEF;
 }
 
 /*
@@ -1433,9 +1296,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1VOLUM
  * Method:    KC_VOLUME_UP
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1VOLUME_1UP
-  (JNIEnv *, jclass) {
-  return (jint) VK_VOLUME_UP;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1VOLUME_1UP(JNIEnv *, jclass) {
+    return (jint)UNDEF;
 }
 
 /*
@@ -1443,9 +1305,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1VOLUM
  * Method:    KC_MEDIA_NEXT_TRACK
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1MEDIA_1NEXT_1TRACK
-  (JNIEnv *, jclass) {
-  return (jint) VK_MEDIA_NEXT_TRACK;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1MEDIA_1NEXT_1TRACK(JNIEnv *, jclass) {
+    return (jint)UNDEF;
 }
 
 /*
@@ -1453,9 +1314,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1MEDIA
  * Method:    KC_MEDIA_PREV_TRACK
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1MEDIA_1PREV_1TRACK
-  (JNIEnv *, jclass) {
-  return (jint) VK_MEDIA_PREV_TRACK;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1MEDIA_1PREV_1TRACK(JNIEnv *, jclass) {
+    return (jint)UNDEF;
 }
 
 /*
@@ -1463,9 +1323,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1MEDIA
  * Method:    KC_MEDIA_STOP
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1MEDIA_1STOP
-  (JNIEnv *, jclass) {
-  return (jint) VK_MEDIA_STOP;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1MEDIA_1STOP(JNIEnv *, jclass) {
+    return (jint)UNDEF;
 }
 
 /*
@@ -1473,9 +1332,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1MEDIA
  * Method:    KC_MEDIA_PLAY_PAUSE
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1MEDIA_1PLAY_1PAUSE
-  (JNIEnv *, jclass) {
-  return (jint) VK_MEDIA_PLAY_PAUSE;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1MEDIA_1PLAY_1PAUSE(JNIEnv *, jclass) {
+    return (jint)UNDEF;
 }
 
 /*
@@ -1483,9 +1341,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1MEDIA
  * Method:    KC_LAUNCH_MAIL
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1LAUNCH_1MAIL
-  (JNIEnv *, jclass) {
-  return (jint) VK_LAUNCH_MAIL;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1LAUNCH_1MAIL(JNIEnv *, jclass) {
+    return (jint)UNDEF;
 }
 
 /*
@@ -1493,9 +1350,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1LAUNC
  * Method:    KC_LAUNCH_MEDIA_SELECT
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1LAUNCH_1MEDIA_1SELECT
-  (JNIEnv *, jclass) {
-  return (jint) VK_LAUNCH_MEDIA_SELECT;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1LAUNCH_1MEDIA_1SELECT(JNIEnv *, jclass) {
+    return (jint)UNDEF;
 }
 
 /*
@@ -1503,9 +1359,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1LAUNC
  * Method:    KC_LAUNCH_APP1
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1LAUNCH_1APP1
-  (JNIEnv *, jclass) {
-  return (jint) VK_LAUNCH_APP1;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1LAUNCH_1APP1(JNIEnv *, jclass) {
+    return (jint)UNDEF;
 }
 
 /*
@@ -1513,9 +1368,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1LAUNC
  * Method:    KC_LAUNCH_APP2
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1LAUNCH_1APP2
-  (JNIEnv *, jclass) {
-  return (jint) VK_LAUNCH_APP2;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1LAUNCH_1APP2(JNIEnv *, jclass) {
+    return (jint)UNDEF;
 }
 
 /*
@@ -1523,9 +1377,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1LAUNC
  * Method:    KC_OEM_1
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1OEM_11
-  (JNIEnv *, jclass) {
-  return (jint) VK_OEM_1;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1OEM_11(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_semicolon);
 }
 
 /*
@@ -1533,9 +1386,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1OEM_1
  * Method:    KC_OEM_PLUS
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1OEM_1PLUS
-  (JNIEnv *, jclass) {
-  return (jint) VK_OEM_PLUS;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1OEM_1PLUS(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_plus);
 }
 
 /*
@@ -1543,9 +1395,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1OEM_1
  * Method:    KC_OEM_COMMA
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1OEM_1COMMA
-  (JNIEnv *, jclass) {
-  return (jint) VK_OEM_COMMA;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1OEM_1COMMA(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_comma);
 }
 
 /*
@@ -1553,9 +1404,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1OEM_1
  * Method:    KC_OEM_MINUS
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1OEM_1MINUS
-  (JNIEnv *, jclass) {
-  return (jint) VK_OEM_MINUS;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1OEM_1MINUS(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_minus);
 }
 
 /*
@@ -1563,9 +1413,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1OEM_1
  * Method:    KC_OEM_PERIOD
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1OEM_1PERIOD
-  (JNIEnv *, jclass) {
-  return (jint) VK_OEM_PERIOD;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1OEM_1PERIOD(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_period);
 }
 
 /*
@@ -1573,9 +1422,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1OEM_1
  * Method:    KC_OEM_2
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1OEM_12
-  (JNIEnv *, jclass) {
-  return (jint) VK_OEM_2;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1OEM_12(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_slash);
 }
 
 /*
@@ -1583,9 +1431,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1OEM_1
  * Method:    KC_OEM_3
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1OEM_13
-  (JNIEnv *, jclass) {
-  return (jint) VK_OEM_3;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1OEM_13(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_asciitilde);
 }
 
 /*
@@ -1593,9 +1440,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1OEM_1
  * Method:    KC_OEM_4
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1OEM_14
-  (JNIEnv *, jclass) {
-  return (jint) VK_OEM_4;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1OEM_14(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_bracketleft);
 }
 
 /*
@@ -1603,9 +1449,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1OEM_1
  * Method:    KC_OEM_5
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1OEM_15
-  (JNIEnv *, jclass) {
-  return (jint) VK_OEM_5;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1OEM_15(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_backslash);
 }
 
 /*
@@ -1613,9 +1458,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1OEM_1
  * Method:    KC_OEM_6
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1OEM_16
-  (JNIEnv *, jclass) {
-  return (jint) VK_OEM_6;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1OEM_16(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_bracketright);
 }
 
 /*
@@ -1623,9 +1467,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1OEM_1
  * Method:    KC_OEM_7
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1OEM_17
-  (JNIEnv *, jclass) {
-  return (jint) VK_OEM_7;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1OEM_17(JNIEnv *, jclass) {
+    return (jint) XKeysymToKeycode(XK_apostrophe);
 }
 
 /*
@@ -1633,9 +1476,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1OEM_1
  * Method:    KC_OEM_8
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1OEM_18
-  (JNIEnv *, jclass) {
-  return (jint) VK_OEM_8;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1OEM_18(JNIEnv *, jclass) {
+    return (jint)UNDEF;
 }
 
 /*
@@ -1643,9 +1485,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1OEM_1
  * Method:    KC_OEM_102
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1OEM_1102
-  (JNIEnv *, jclass) {
-  return (jint) VK_OEM_102;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1OEM_1102(JNIEnv *, jclass) {
+    return (jint)UNDEF;
 }
 
 /*
@@ -1653,9 +1494,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1OEM_1
  * Method:    KC_PROCESSKEY
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1PROCESSKEY
-  (JNIEnv *, jclass) {
-  return (jint) VK_PROCESSKEY;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1PROCESSKEY(JNIEnv *, jclass) {
+    return (jint)UNDEF;
 }
 
 /*
@@ -1663,9 +1503,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1PROCE
  * Method:    KC_PACKET
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1PACKET
-  (JNIEnv *, jclass) {
-  return (jint) VK_PACKET;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1PACKET(JNIEnv *, jclass) {
+    return (jint)UNDEF;
 }
 
 /*
@@ -1673,9 +1512,12 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1PACKE
  * Method:    KC_ATTN
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1ATTN
-  (JNIEnv *, jclass) {
-  return (jint) VK_ATTN;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1ATTN(JNIEnv *, jclass) {
+#ifdef XK_3270
+    return (jint) XKeysymToKeycode(XK_3270_Attn);
+#else
+    return (jint)UNDEF;
+#endif
 }
 
 /*
@@ -1683,9 +1525,12 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1ATTN
  * Method:    KC_CRSEL
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1CRSEL
-  (JNIEnv *, jclass) {
-  return (jint) VK_CRSEL;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1CRSEL(JNIEnv *, jclass) {
+#ifdef XK_3270
+    return (jint) XKeysymToKeycode(XK_3270_CursorSelect);
+#else
+    return (jint)UNDEF;
+#endif
 }
 
 /*
@@ -1693,9 +1538,12 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1CRSEL
  * Method:    KC_EXSEL
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1EXSEL
-  (JNIEnv *, jclass) {
-  return (jint) VK_EXSEL;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1EXSEL(JNIEnv *, jclass) {
+#ifdef XK_3270
+    return (jint) XKeysymToKeycode(XK_3270_ExSelect);
+#else
+    return (jint)UNDEF;
+#endif
 }
 
 /*
@@ -1703,9 +1551,12 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1EXSEL
  * Method:    KC_EREOF
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1EREOF
-  (JNIEnv *, jclass) {
-  return (jint) VK_EREOF;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1EREOF(JNIEnv *, jclass) {
+#ifdef XK_3270
+    return (jint) XKeysymToKeycode(XK_3270_EraseEOF);
+#else
+    return (jint)UNDEF;
+#endif
 }
 
 /*
@@ -1713,9 +1564,12 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1EREOF
  * Method:    KC_PLAY
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1PLAY
-  (JNIEnv *, jclass) {
-  return (jint) VK_PLAY;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1PLAY(JNIEnv *, jclass) {
+#ifdef XK_3270
+    return (jint) XKeysymToKeycode(XK_3270_Play);
+#else
+    return (jint)UNDEF;
+#endif
 }
 
 /*
@@ -1723,9 +1577,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1PLAY
  * Method:    KC_ZOOM
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1ZOOM
-  (JNIEnv *, jclass) {
-  return (jint) VK_ZOOM;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1ZOOM(JNIEnv *, jclass) {
+    return (jint)UNDEF;
 }
 
 /*
@@ -1733,9 +1586,8 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1ZOOM
  * Method:    KC_NONAME
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1NONAME
-  (JNIEnv *, jclass) {
-  return (jint) VK_NONAME;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1NONAME(JNIEnv *, jclass) {
+    return (jint)UNDEF;
 }
 
 /*
@@ -1743,9 +1595,12 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1NONAM
  * Method:    KC_PA1
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1PA1
-  (JNIEnv *, jclass) {
-  return (jint) VK_PA1;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1PA1(JNIEnv *, jclass) {
+#ifdef XK_3270
+    return (jint) XKeysymToKeycode(XK_3270_PA1);
+#else
+    return (jint)UNDEF;
+#endif
 }
 
 /*
@@ -1753,7 +1608,10 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1PA1
  * Method:    KC_OEM_CLEAR
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1OEM_1CLEAR
-  (JNIEnv *, jclass) {
-  return (jint) VK_OEM_CLEAR;
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1OEM_1CLEAR(JNIEnv *, jclass) {
+#ifdef XK_3270
+    return (jint) XKeysymToKeycode(XK_3270_Reset);
+#else
+    return (jint)UNDEF;
+#endif
 }

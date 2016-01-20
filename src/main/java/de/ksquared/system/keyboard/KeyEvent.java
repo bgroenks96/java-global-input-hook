@@ -50,8 +50,17 @@ public class KeyEvent extends EventObject {
 
     private static final long serialVersionUID = -8194688548489965445L;
 
+    /**
+     * Provides native key code bindings based on the Win32 virtual key
+     * specification. Note that some non-standard bindings may be platform
+     * specific. Key codes unrecognized by the underlying system will always
+     * hold the same value as {@link #UNDEFINED}. The raw native key code of a
+     * KeyEvent can always be accessed via KeyEvent.getNativeKeyCode().
+     * 
+     * @author Brian Groenke
+     */
     public enum KeyCode {
-        VK_UNDEFINED(NativeKeyCodes.KC_UNDEFINED()),
+        UNDEFINED(NativeKeyCodes.KC_UNDEFINED()),
         VK_LBUTTON(NativeKeyCodes.KC_LBUTTON()),
         VK_RBUTTON(NativeKeyCodes.KC_RBUTTON()),
         VK_CANCEL(NativeKeyCodes.KC_CANCEL()),
@@ -131,8 +140,8 @@ public class KeyEvent extends EventObject {
         VK_X(NativeKeyCodes.KC_X()),
         VK_Y(NativeKeyCodes.KC_Y()),
         VK_Z(NativeKeyCodes.KC_Z()),
-        VK_LWIN(NativeKeyCodes.KC_LWIN()),
-        VK_RWIN(NativeKeyCodes.KC_RWIN()),
+        VK_LMETA(NativeKeyCodes.KC_LMETA()),
+        VK_RMETA(NativeKeyCodes.KC_RMETA()),
         VK_APPS(NativeKeyCodes.KC_APPS()),
         VK_SLEEP(NativeKeyCodes.KC_SLEEP()),
         VK_NUMPAD0(NativeKeyCodes.KC_NUMPAD0()),
@@ -232,11 +241,16 @@ public class KeyEvent extends EventObject {
             this.nativeKeyCode = nativeKeyCode;
         }
 
-        public int getNativeKeyCode () {
-           return nativeKeyCode;
+        public int getNativeKeyCode() {
+            return nativeKeyCode;
         }
 
-        private static final Map<Integer, KeyCode> nativeKeyCodeMap = new HashMap<Integer,KeyCode>();
+        @Override
+        public String toString() {
+            return name() + "(" + nativeKeyCode + ")";
+        }
+
+        private static final Map<Integer, KeyCode> nativeKeyCodeMap = new HashMap<Integer, KeyCode>();
 
         static {
             for (final KeyCode keyCode : values()) {
@@ -275,6 +289,12 @@ public class KeyEvent extends EventObject {
         return transitionState;
     }
 
+    /**
+     * @return the native key code reported by the underlying system. In most
+     *         cases, the value returned will map to an entry in the KeyCode
+     *         enum. However, this may not occur for key events reported by the
+     *         system that are OEM specific.
+     */
     public int getNativeKeyCode() {
         return nativeKeyCode;
     }
@@ -302,7 +322,8 @@ public class KeyEvent extends EventObject {
 
     @Override
     public String toString() {
-        final StringBuilder string = new StringBuilder().append(nativeKeyCode)
+        final KeyCode keyCode = KeyCode.from(nativeKeyCode);
+        final StringBuilder string = new StringBuilder().append(keyCode.toString())
                                                         .append(" [")
                                                         .append(transitionState ? "down" : "up");
         if (altPressed) {
