@@ -17,6 +17,12 @@
 package de.ksquared.system.keyboard;
 
 class NativeKeyCodes {
+  
+    static {
+        init();
+    }
+  
+    private static native int init();
 
     static native int KC_UNDEFINED();
 

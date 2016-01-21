@@ -5,11 +5,12 @@
 
 Window root;
 Display *disp;
+JNIEnv *env;
 JavaVM *jvm = NULL;
 jobject keyboardHookObject = NULL;
 jobject globalKeyListenerObject = NULL;
 jmethodID processKeyMethod = NULL;
-pthread pollingThread;
+pthread_t pollingThread;
 int running = 0;
 
 void *poll_input_x11(void *threadId) {
@@ -21,10 +22,10 @@ void *poll_input_x11(void *threadId) {
         XNextEvent(disp, &event);
         if (event.type)
             if ((*jvm)->AttachCurrentThread(jvm, (void **) &env, NULL) >= 0) {
-                jboolean transitionState = (jboolean) FALSE;
+                jboolean transitionState = JNI_FALSE;
                 switch (event.type) {
                 case KeyPress:
-                    transitionState = (jboolean) TRUE;
+                    transitionState = JNI_TRUE;
                 case KeyRelease:
                     (*env)->CallVoidMethod(env, keyboardHookObject, processKeyMethod, transitionState,
                                            event.xkey.keycode, globalKeyListenerObject);
@@ -38,7 +39,7 @@ void *poll_input_x11(void *threadId) {
     }
 }
 
-JNIEXPORT void JNICALL Java_de_ksquared_system_keyboard_KeyboardHook_registerHook(JNIEnv * env,jobject obj,jobject _globalKeyListenerObject) {
+JNIEXPORT void JNICALL Java_de_ksquared_system_keyboard_KeyboardHook_registerHook(JNIEnv *env,jobject obj,jobject _globalKeyListenerObject) {
     puts("NATIVE: Java_de_ksquared_system_keyboard_KeyboardHook_registerHook - Hooking started!\n");
 
     globalKeyListenerObject = _globalKeyListenerObject;

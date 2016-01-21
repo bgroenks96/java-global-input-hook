@@ -24,12 +24,13 @@
 #ifdef __cplusplus
 extern "C" {
 #endif
+
 /*
  * Class:     de_ksquared_system_keyboard_NativeKeyCodes
  * Method:    KC_LBUTTON
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1UNDEFINED(JNIEnv *, jclass);
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_init(JNIEnv *, jclass);
 
 /*
  * Class:     de_ksquared_system_keyboard_NativeKeyCodes
