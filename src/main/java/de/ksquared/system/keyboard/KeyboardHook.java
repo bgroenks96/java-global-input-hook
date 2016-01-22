@@ -83,6 +83,7 @@ class KeyboardHook {
         final KeyCode keyCode = KeyCode.from(nativeKeyCode);
         switch (keyCode) {
         case KC_RMETA:
+        case KC_LMETA:
             extendedKey = transitionState;
             break;
         case KC_RMENU:

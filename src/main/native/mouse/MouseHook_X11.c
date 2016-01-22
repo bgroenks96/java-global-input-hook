@@ -6,6 +6,12 @@
 #include <time.h>
 #include "MouseHook.h"
 
+#ifdef DEBUG
+#define DEBUG_PRINT(x) puts x
+#else
+#define DEBUG_PRINT(x) return
+#endif
+
 // emulated win32 mouse button event identifiers
 #define WM_LBUTTONDOWN 513
 #define WM_LBUTTONUP 514
@@ -75,14 +81,14 @@ void *poll_mouse_input_x11(void *arg) {
 
             (*jvm)->DetachCurrentThread(jvm);
         } else {
-            puts("NATIVE: poll_input_x11 - Error on attaching current thread.\n");
-            fflush(stdout);
+            fputs("NATIVE: poll_input_x11 - Error on attaching current thread.\n", stderr);
+            fflush(stderr);
         }
     }
 }
 
 JNIEXPORT void JNICALL Java_de_ksquared_system_mouse_MouseHook_registerHook(JNIEnv *env, jobject thisObj, jobject _globalMouseListenerObject) {
-    puts("NATIVE: Java_de_ksquared_system_mouse_MouseHook_registerHook - Registering input hook...");
+    DEBUG_PRINT("NATIVE: Java_de_ksquared_system_mouse_MouseHook_registerHook - Registering input hook...");
     fflush(stdout);
 
     const size_t alloc_size = ++listenerCount*sizeof(MouseListener);
@@ -102,7 +108,8 @@ JNIEXPORT void JNICALL Java_de_ksquared_system_mouse_MouseHook_registerHook(JNIE
 
     if(!disp) disp = XOpenDisplay(0);
     if (!disp) {
-        puts("NATIVE: Java_de_ksquared_system_mouse_MouseHook_registerHook - Failed to open display '0'");
+        fputs("NATIVE: Java_de_ksquared_system_mouse_MouseHook_registerHook - Failed to open display '0'", stderr);
+        fflush(stderr);
         return;
     }
 
@@ -120,19 +127,19 @@ JNIEXPORT void JNICALL Java_de_ksquared_system_mouse_MouseHook_registerHook(JNIE
     int err = pthread_create(&ml.pollingThread, &thread_config, poll_mouse_input_x11, (void*) arg);
 
     if (err) {
-        puts("NATIVE: Java_de_ksquared_system_mouse_MouseHook_registerHook - Failed to launch new pthread.");
+        fputs("NATIVE: Java_de_ksquared_system_mouse_MouseHook_registerHook - Failed to launch new pthread.", stderr);
         delete_listener(env, listenerCount - 1);
         return;
     }
 
-    puts("NATIVE: Java_de_ksquared_system_mouse_MouseHook_registerHook - Successfully initialized event polling!");
+    DEBUG_PRINT("NATIVE: Java_de_ksquared_system_mouse_MouseHook_registerHook - Successfully initialized event polling!");
     fflush(stdout);
 }
 
 JNIEXPORT void JNICALL Java_de_ksquared_system_mouse_MouseHook_unregisterHook(JNIEnv *env, jobject object) {
     int index = index_of_listener(env, object);
     if (index < 0) {
-        puts("NATIVE: Java_de_ksquared_system_mouse_MouseHook_unregisterHook - No matching listener registered!");
+        DEBUG_PRINT("NATIVE: Java_de_ksquared_system_mouse_MouseHook_unregisterHook - No matching listener registered!");
         return;
     }
     MouseListener *ml = &listeners[index];
@@ -146,7 +153,7 @@ JNIEXPORT void JNICALL Java_de_ksquared_system_mouse_MouseHook_unregisterHook(JN
         disp = NULL;
     }
 
-    puts("NATIVE: Java_de_ksquared_system_mouse_MouseHook_unregisterHook - Sucessfully unregistered hook.");
+    DEBUG_PRINT("NATIVE: Java_de_ksquared_system_mouse_MouseHook_unregisterHook - Sucessfully unregistered hook.");
     pthread_exit(NULL);
 }
 

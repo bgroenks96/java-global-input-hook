@@ -6,6 +6,12 @@
 #include <time.h>
 #include "KeyboardHook.h"
 
+#ifdef DEBUG
+#define DEBUG_PRINT(x) puts x
+#else
+#define DEBUG_PRINT(x) while(0){}
+#endif
+
 // declare utility functions
 int index_of_listener(JNIEnv*, jobject);
 void delete_listener(JNIEnv*, int index);
@@ -59,14 +65,14 @@ void *poll_key_input_x11(void *arg) {
             // detach thread from JVM environment
             (*jvm)->DetachCurrentThread(jvm);
         } else {
-            puts("NATIVE: poll_key_input_x11 - Error on attaching current thread.\n");
-            fflush(stdout);
+            fputs("NATIVE: poll_key_input_x11 - Error on attaching current thread.\n", stderr);
+            fflush(stderr);
         }
     }
 }
 
 JNIEXPORT void JNICALL Java_de_ksquared_system_keyboard_KeyboardHook_registerHook(JNIEnv *env,jobject obj,jobject _globalKeyListenerObject) {
-    puts("NATIVE: Java_de_ksquared_system_keyboard_KeyboardHook_registerHook - Registering input hook...");
+    DEBUG_PRINT("NATIVE: Java_de_ksquared_system_keyboard_KeyboardHook_registerHook - Registering input hook...");
     fflush(stdout);
 
     const size_t alloc_size = ++listenerCount*sizeof(KeyListener);
@@ -85,7 +91,8 @@ JNIEXPORT void JNICALL Java_de_ksquared_system_keyboard_KeyboardHook_registerHoo
 
     if(!disp) disp = XOpenDisplay(0);
     if (!disp) {
-        puts("NATIVE: Java_de_ksquared_system_keyboard_KeyboardHook_registerHook - Failed to open display '0'");
+        fputs("NATIVE: Java_de_ksquared_system_keyboard_KeyboardHook_registerHook - Failed to open display '0'", stderr);
+        fflush(stderr);
         return;
     }
 
@@ -101,20 +108,20 @@ JNIEXPORT void JNICALL Java_de_ksquared_system_keyboard_KeyboardHook_registerHoo
     int err = pthread_create(&kl.pollingThread, &thread_config, poll_key_input_x11, (void*) arg);
 
     if (err) {
-        puts("NATIVE: Java_de_ksquared_system_keyboard_KeyboardHook_registerHook - Failed to launch new pthread.");
-        fflush(stdout);
+        fputs("NATIVE: Java_de_ksquared_system_keyboard_KeyboardHook_registerHook - Failed to launch new pthread.", stderr);
+        fflush(stderr);
         delete_listener(env, listenerCount - 1);
         return;
     }
 
-    puts("NATIVE: Java_de_ksquared_system_keyboard_KeyboardHook_registerHook - Successfully initialized event polling!");
+    DEBUG_PRINT("NATIVE: Java_de_ksquared_system_keyboard_KeyboardHook_registerHook - Successfully initialized event polling!");
     fflush(stdout);
 }
 
 JNIEXPORT void JNICALL Java_de_ksquared_system_keyboard_KeyboardHook_unregisterHook(JNIEnv *env, jobject object) {
     int index = index_of_listener(env, object);
     if (index < 0) {
-        puts("NATIVE: Java_de_ksquared_system_keyboard_KeyboardHook_unregisterHook - No matching listener registered!");
+        DEBUG_PRINT("NATIVE: Java_de_ksquared_system_keyboard_KeyboardHook_unregisterHook - No matching listener registered!");
         return;
     }
     KeyListener *kl = &listeners[index];
@@ -128,7 +135,7 @@ JNIEXPORT void JNICALL Java_de_ksquared_system_keyboard_KeyboardHook_unregisterH
         disp = NULL;
     }
 
-    puts("NATIVE: Java_de_ksquared_system_keyboard_KeyboardHook_unregisterHook - Sucessfully unregistered hook.");
+    DEBUG_PRINT("NATIVE: Java_de_ksquared_system_keyboard_KeyboardHook_unregisterHook - Sucessfully unregistered hook.");
     pthread_exit(NULL);
 }
 

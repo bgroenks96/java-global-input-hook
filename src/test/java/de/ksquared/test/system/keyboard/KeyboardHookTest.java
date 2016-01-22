@@ -68,6 +68,7 @@ public class KeyboardHookTest {
                 }
             }
         });
+        System.out.println("Registered global key listener!");
         try (final Scanner in = new Scanner(System.in)) {
             while (!in.next().equals("q")) {
                 Thread.sleep(100);

@@ -761,7 +761,7 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1Z(JNI
  * Signature: ()I
  */
 JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1LMETA(JNIEnv *env, jclass class) {
-    return (jint) XKeysymToKeycode(disp, XK_Meta_L);
+    return (jint) XKeysymToKeycode(disp, XK_Super_L);
 }
 
 /*
@@ -770,7 +770,7 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1LMETA
  * Signature: ()I
  */
 JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1RMETA(JNIEnv *env, jclass class) {
-    return (jint) XKeysymToKeycode(disp, XK_Meta_R);
+    return (jint) XKeysymToKeycode(disp, XK_Super_R);
 }
 
 /*
@@ -879,6 +879,15 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1NUMPA
  */
 JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1NUMPAD9(JNIEnv *env, jclass class) {
     return (jint) XKeysymToKeycode(disp, XK_KP_9);
+}
+
+/*
+ * Class:     de_ksquared_system_keyboard_NativeKeyCodes
+ * Method:    KC_NUMPAD_ENTER
+ * Signature: ()I
+ */
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1NUMPAD_1ENTER(JNIEnv *env, jclass class) {
+    return (jint) XKeysymToKeycode(disp, XK_KP_Enter);
 }
 
 /*

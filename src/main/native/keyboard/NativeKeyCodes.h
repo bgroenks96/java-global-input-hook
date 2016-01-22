@@ -692,6 +692,13 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1NUMPA
 
 /*
  * Class:     de_ksquared_system_keyboard_NativeKeyCodes
+ * Method:    KC_NUMPAD_ENTER
+ * Signature: ()I
+ */
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1NUMPAD_1ENTER(JNIEnv *, jclass);
+
+/*
+ * Class:     de_ksquared_system_keyboard_NativeKeyCodes
  * Method:    KC_MULTIPLY
  * Signature: ()I
  */

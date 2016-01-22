@@ -17,12 +17,12 @@
 package de.ksquared.system.keyboard;
 
 class NativeKeyCodes {
-  
+
     static {
-    	Native.load();
+    	if (!Native.load()) throw new RuntimeException("Failed to load native libraries.");
         init();
     }
-  
+
     private static native int init();
 
     static native int KC_UNDEFINED();
@@ -212,7 +212,7 @@ class NativeKeyCodes {
     static native int KC_NUMPAD8();
 
     static native int KC_NUMPAD9();
-    
+
     static native int KC_NUMPAD_ENTER();
 
     static native int KC_MULTIPLY();
