@@ -9,14 +9,14 @@ LIBNAME=keyboardhook
 # clean
 rm -f $BIN/*.so ./$BIN/*.o ./src/main/java/*.lib
 
-# libkeyboardhook x86
+echo "Compiling libkeyboardhook x86"
 gcc -I"/usr/lib/jvm/java-7-openjdk-amd64/include" -I"/usr/lib/jvm/java-7-openjdk-amd64/include/linux" -c -m32 -fPIC -o $BIN/$OBJ1.o $SRC/keyboard/$OBJ1.c
 gcc -I"/usr/lib/jvm/java-7-openjdk-amd64/include" -I"/usr/lib/jvm/java-7-openjdk-amd64/include/linux" -c -m32 -fPIC -o $BIN/$OBJ2.o $SRC/keyboard/$OBJ2.c
 gcc -shared -m32 -o ./bin/lib$LIBNAME-linux-i386.so $BIN/*.o -pthread -lX11
 
 rm -f $BIN/*.o
 
-# libkeyboardhook x86_64
+echo "Compiling libkeyboardhook x86_64"
 gcc -I"/usr/lib/jvm/java-7-openjdk-amd64/include" -I"/usr/lib/jvm/java-7-openjdk-amd64/include/linux" -c -m64 -fPIC -o $BIN/$OBJ1.o $SRC/keyboard/$OBJ1.c
 gcc -I"/usr/lib/jvm/java-7-openjdk-amd64/include" -I"/usr/lib/jvm/java-7-openjdk-amd64/include/linux" -c -m64 -fPIC -o $BIN/$OBJ2.o $SRC/keyboard/$OBJ2.c
 gcc -shared -m64 -o ./bin/lib$LIBNAME-linux-amd64.so $BIN/*.o -pthread -lX11
