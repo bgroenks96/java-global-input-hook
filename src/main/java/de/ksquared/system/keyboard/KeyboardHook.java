@@ -82,25 +82,25 @@ class KeyboardHook {
     void processControlKeys(final boolean transitionState, final int nativeKeyCode) {
         final KeyCode keyCode = KeyCode.from(nativeKeyCode);
         switch (keyCode) {
-        case VK_RMETA:
+        case KC_RMETA:
             extendedKey = transitionState;
             break;
-        case VK_RMENU:
+        case KC_RMENU:
             extendedKey = transitionState;
-        case VK_MENU:
-        case VK_LMENU:
+        case KC_MENU:
+        case KC_LMENU:
             altPressed = transitionState;
             break;
-        case VK_RSHIFT:
+        case KC_RSHIFT:
             extendedKey = transitionState;
-        case VK_SHIFT:
-        case VK_LSHIFT:
+        case KC_SHIFT:
+        case KC_LSHIFT:
             shiftPressed = transitionState;
             break;
-        case VK_RCONTROL:
+        case KC_RCONTROL:
             extendedKey = transitionState;
-        case VK_CONTROL:
-        case VK_LCONTROL:
+        case KC_CONTROL:
+        case KC_LCONTROL:
             ctrlPressed = transitionState;
             break;
         default:

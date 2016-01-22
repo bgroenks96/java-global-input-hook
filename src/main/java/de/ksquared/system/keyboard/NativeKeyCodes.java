@@ -212,6 +212,8 @@ class NativeKeyCodes {
     static native int KC_NUMPAD8();
 
     static native int KC_NUMPAD9();
+    
+    static native int KC_NUMPAD_ENTER();
 
     static native int KC_MULTIPLY();
 

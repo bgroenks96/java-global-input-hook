@@ -52,7 +52,6 @@ import de.ksquared.system.keyboard.KeyEvent.KeyCode;
 public class KeyboardHookTest {
 
     public static void main(final String[] args) {
-    	//System.out.println(KeyCode.VK_D + " " + KeyCode.VK_I);
         final GlobalKeyListener listener = new GlobalKeyListener();
         listener.addKeyListener(new KeyAdapter() {
 
@@ -64,7 +63,7 @@ public class KeyboardHookTest {
             @Override
             public void keyReleased(final KeyEvent event) {
                 System.out.println(event);
-                if (event.getNativeKeyCode() == KeyCode.VK_0.getNativeKeyCode() && event.isCtrlPressed()) {
+                if (event.getNativeKeyCode() == KeyCode.KC_0.getNativeKeyCode() && event.isCtrlPressed()) {
                     System.out.println("CTRL+0 was just released (CTRL is still pressed)");
                 }
             }

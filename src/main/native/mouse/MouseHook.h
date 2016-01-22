@@ -1,5 +1,5 @@
 /*
- * Copyright 2011 Kristian Kraljic, Johannes Schüth 2008. All rights reserved.
+ * Copyright 2011 Kristian Kraljic, Johannes Schï¿½th 2008. All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without modification, are
  * permitted provided that the following conditions are met:
@@ -23,7 +23,7 @@
  *
  * The views and conclusions contained in the software and documentation are those of the
  * authors and should not be interpreted as representing official policies, either expressed
- * or implied, of Kristian Kraljic and Johannes Schüth.
+ * or implied, of Kristian Kraljic and Johannes Schï¿½th.
  */
 
 #include <jni.h>
@@ -40,7 +40,7 @@ extern "C" {
  * Method:    registerHook
  * Signature: (LGlobalEventListener;)V
  */
-JNIEXPORT void JNICALL Java_de_ksquared_system_mouse_MouseHook_registerHook(JNIEnv *,jobject thisObj,jobject listenerObj);
+JNIEXPORT void JNICALL Java_de_ksquared_system_mouse_MouseHook_registerHook(JNIEnv *env,jobject thisObj,jobject listenerObj);
 /*
  * Class:     MouseHook
  * Method:    unregisterHook

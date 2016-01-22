@@ -8,13 +8,13 @@
 
 // declare utility functions
 int index_of_listener(JNIEnv*, jobject);
-void* delete_listener(void *keyListener);
+void delete_listener(JNIEnv*, int index);
 
 typedef struct key_listener {
-    jobject keyboardHookObject;
-    jobject globalKeyListenerObject;
-    pthread_t pollingThread;
-    volatile int shouldStop;
+        jobject keyboardHookObject;
+        jobject globalKeyListenerObject;
+        pthread_t pollingThread;
+        volatile int shouldStop;
 } KeyListener;
 
 Display *disp;
@@ -23,7 +23,7 @@ jmethodID processKeyMethod;
 KeyListener *listeners;
 int listenerCount = 0;
 
-void *poll_input_x11(void *arg) {
+void *poll_key_input_x11(void *arg) {
     int index = *((int*)arg);
     free(arg); // deallocate arg pointer
     KeyListener *kl = &listeners[index];
@@ -34,15 +34,16 @@ void *poll_input_x11(void *arg) {
     char prev[32];
     char curr[32];
     while (nanosleep(&t1, &t2) == 0) {
-        if ((*jvm)->AttachCurrentThread(jvm, (void **) &env, NULL) >= 0) {
-            if (kl->shouldStop) pthread_exit(NULL);
+        if (kl->shouldStop) pthread_exit(NULL);
 
+        // attach thread to JVM environment
+        if ((*jvm)->AttachCurrentThread(jvm, (void **) &env, NULL) >= 0) {
             XQueryKeymap(disp, curr);
             int i,j;
             for (i = 0; i < 32; i++) {
                 char prevKeyByte = prev[i], currKeyByte = curr[i];
-                // if byte is unchanged, skip further processing
-                //if (prevKeyByte ^ currKeyByte == 0) continue;
+                // skip processing for all bits in key byte if nothing changed
+                if (currKeyByte == prevKeyByte) continue;
                 for (j = 0; j < 8; j++) {
                     int keyCode = i*8 + j;
                     int prevKeyBit = (0x1 << j) & prevKeyByte;
@@ -55,8 +56,10 @@ void *poll_input_x11(void *arg) {
                 }
                 prev[i] = currKeyByte;
             }
+            // detach thread from JVM environment
+            (*jvm)->DetachCurrentThread(jvm);
         } else {
-            puts("NATIVE: poll_input_x11 - Error on attaching current thread.\n");
+            puts("NATIVE: poll_key_input_x11 - Error on attaching current thread.\n");
             fflush(stdout);
         }
     }
@@ -88,19 +91,21 @@ JNIEXPORT void JNICALL Java_de_ksquared_system_keyboard_KeyboardHook_registerHoo
 
     (*env)->GetJavaVM(env, &jvm);
 
+    listeners[listenerCount - 1] = kl;
+
     pthread_attr_t thread_config;
     pthread_attr_init(&thread_config);
     int *arg = malloc(sizeof(int));
     *arg = listenerCount - 1;
     // start thread with thread_config and the current listener index as the argument
-    int err = pthread_create(&kl.pollingThread, &thread_config, poll_input_x11, (void*) arg);
+    int err = pthread_create(&kl.pollingThread, &thread_config, poll_key_input_x11, (void*) arg);
 
     if (err) {
         puts("NATIVE: Java_de_ksquared_system_keyboard_KeyboardHook_registerHook - Failed to launch new pthread.");
+        fflush(stdout);
+        delete_listener(env, listenerCount - 1);
         return;
     }
-
-    listeners[listenerCount - 1] = kl;
 
     puts("NATIVE: Java_de_ksquared_system_keyboard_KeyboardHook_registerHook - Successfully initialized event polling!");
     fflush(stdout);
@@ -117,6 +122,7 @@ JNIEXPORT void JNICALL Java_de_ksquared_system_keyboard_KeyboardHook_unregisterH
     // notify thread to terminate
     kl->shouldStop = 1;
     pthread_join(thread, NULL);
+    delete_listener(env, index);
     if (listenerCount == 0) {
         XCloseDisplay(disp);
         disp = NULL;
@@ -131,8 +137,8 @@ JNIEXPORT void JNICALL Java_de_ksquared_system_keyboard_KeyboardHook_unregisterH
 int index_of_listener(JNIEnv *env, jobject keyboardHookObject) {
     int i, index = -1;
     for (i = 0; i < listenerCount; i++) {
-        KeyListener next = listeners[i];
-        if ((*env)->IsSameObject(env, keyboardHookObject, next.keyboardHookObject)) {
+        KeyListener *next = &listeners[i];
+        if ((*env)->IsSameObject(env, keyboardHookObject, next->keyboardHookObject)) {
             index = i;
             break;
         }
@@ -140,23 +146,14 @@ int index_of_listener(JNIEnv *env, jobject keyboardHookObject) {
     return index;
 }
 
-void *delete_listener(void *keyListener) {
-    KeyListener *kl = (KeyListener*) keyListener;
-    // destroy listener resources
-    JNIEnv *env;
-    (*jvm)->AttachCurrentThread(jvm, (void*) env, NULL);
-
-    // locate listener index and remove from array
-    int index = index_of_listener(env, kl->keyboardHookObject);
+void delete_listener(JNIEnv *env, int index) {
+    if (index < 0) return;
+    KeyListener *kl = &listeners[index];
     // delete jni resources and detach thread
     (*env)->DeleteGlobalRef(env, kl->keyboardHookObject);
     (*env)->DeleteGlobalRef(env, kl->globalKeyListenerObject);
-    (*jvm)->DetachCurrentThread(jvm);
-    if (index < 0) {
-        puts("NATIVE: delete_listener - deleting unregistered listener!");
-        return;
-    }
 
+    // remove from listener array
     KeyListener *lreduced = malloc(--listenerCount * sizeof(KeyListener));
     int offs0 = index * sizeof(KeyListener);
     int offs1 = offs0 + sizeof(KeyListener);
