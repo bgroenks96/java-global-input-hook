@@ -22,7 +22,7 @@ Display *disp;
 
 /*
  * Class:     de_ksquared_system_keyboard_NativeKeyCodes
- * Method:    KC_UNDEFINED
+ * Method:    init
  * Signature: ()I
  */
 JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_init(JNIEnv *env, jclass class) {
@@ -36,7 +36,7 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_init(JNIE
  * Method:    KC_UNDEFINED
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_UNDEFINED(JNIEnv *env, jclass class) {
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1UNDEFINED(JNIEnv *env, jclass class) {
     return (jint)UNDEF;
 }
 
@@ -181,7 +181,7 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1CAPIT
  * Signature: ()I
  */
 JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1KANA(JNIEnv *env, jclass class) {
-    return (jint) XKeysysToKeycode(XK_kana_switch);
+    return (jint) XKeysymToKeycode(disp, XK_kana_switch);
 }
 
 /*

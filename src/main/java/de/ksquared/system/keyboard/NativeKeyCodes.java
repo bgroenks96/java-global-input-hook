@@ -19,6 +19,7 @@ package de.ksquared.system.keyboard;
 class NativeKeyCodes {
   
     static {
+    	Native.load();
         init();
     }
   

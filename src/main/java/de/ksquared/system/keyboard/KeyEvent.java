@@ -259,7 +259,7 @@ public class KeyEvent extends EventObject {
         }
 
         public static KeyCode from(final int nativeKeyCode) {
-            return nativeKeyCodeMap.get(nativeKeyCode);
+            return nativeKeyCodeMap.containsKey(nativeKeyCode) ? nativeKeyCodeMap.get(nativeKeyCode) : UNDEFINED;
         }
     }
 

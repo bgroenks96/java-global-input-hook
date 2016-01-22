@@ -13,7 +13,7 @@
  * COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
  * ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  * ----------------------------------------------------------------------------------------------------------------------------
- * Copyright 2011 Kristian Kraljic, Johannes Sch�th 2008. All rights reserved.
+ * Copyright 2011 Kristian Kraljic, Johannes Sch���th 2008. All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without modification, are
  * permitted provided that the following conditions are met:
@@ -37,10 +37,12 @@
  *
  * The views and conclusions contained in the software and documentation are those of the
  * authors and should not be interpreted as representing official policies, either expressed
- * or implied, of Kristian Kraljic and Johannes Sch�th.
+ * or implied, of Kristian Kraljic and Johannes Sch���th.
  */
 
 package de.ksquared.test.system.keyboard;
+
+import java.util.Scanner;
 
 import de.ksquared.system.keyboard.GlobalKeyListener;
 import de.ksquared.system.keyboard.KeyAdapter;
@@ -50,7 +52,9 @@ import de.ksquared.system.keyboard.KeyEvent.KeyCode;
 public class KeyboardHookTest {
 
     public static void main(final String[] args) {
-        new GlobalKeyListener().addKeyListener(new KeyAdapter() {
+    	//System.out.println(KeyCode.VK_D + " " + KeyCode.VK_I);
+        final GlobalKeyListener listener = new GlobalKeyListener();
+        listener.addKeyListener(new KeyAdapter() {
 
             @Override
             public void keyPressed(final KeyEvent event) {
@@ -60,17 +64,18 @@ public class KeyboardHookTest {
             @Override
             public void keyReleased(final KeyEvent event) {
                 System.out.println(event);
-                if (event.getNativeKeyCode() == KeyCode.VK_ADD.getNativeKeyCode() && event.isCtrlPressed()) {
-                    System.out.println("CTRL+ADD was just released (CTRL is still pressed)");
+                if (event.getNativeKeyCode() == KeyCode.VK_0.getNativeKeyCode() && event.isCtrlPressed()) {
+                    System.out.println("CTRL+0 was just released (CTRL is still pressed)");
                 }
             }
         });
-        while (true) {
-            try {
+        try (final Scanner in = new Scanner(System.in)) {
+            while (!in.next().equals("q")) {
                 Thread.sleep(100);
-            } catch (final InterruptedException e) {
-                e.printStackTrace();
             }
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
+        listener.dispose();
     }
 }

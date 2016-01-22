@@ -1,5 +1,5 @@
 /*
- * Copyright 2011 Kristian Kraljic, Johannes Sch�th 2008. All rights reserved.
+ * Copyright 2011 Kristian Kraljic, Johannes Sch���th 2008. All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without modification, are
  * permitted provided that the following conditions are met:
@@ -23,7 +23,7 @@
  *
  * The views and conclusions contained in the software and documentation are those of the
  * authors and should not be interpreted as representing official policies, either expressed
- * or implied, of Kristian Kraljic and Johannes Sch�th.
+ * or implied, of Kristian Kraljic and Johannes Sch���th.
  */
 
 package de.ksquared.system.keyboard;
@@ -62,13 +62,12 @@ public class Native {
             osname = "win";
         } else if (osname.startsWith("sunos")) {
             osname = "solaris";
-        }
-        if (osarch.startsWith("i") && osarch.endsWith("86")) {
-            osarch = "x86";
+        } else if (osname.contains ("linux")) {
+            osname = "linux";
         }
         libname = "keyboardhook-" + osname + '-' + osarch + ".lib";
         try {
-            final InputStream input = Native.class.getClassLoader().getResourceAsStream(libname);
+            final InputStream input = ClassLoader.getSystemClassLoader ().getResourceAsStream(libname);
             if (input == null) throw new Exception("libname: " + libname + " not found");
             final File temp = File.createTempFile("keyboardhook-", ".lib");
             temp.deleteOnExit();
@@ -82,7 +81,9 @@ public class Native {
             out.close();
             System.load(temp.getAbsolutePath());
             return loaded = Boolean.TRUE;
-        } catch (final Exception e) { /* do nothing, go on */ }
+        } catch (final Exception e) {
+            e.printStackTrace ();
+        }
         return loaded = Boolean.FALSE;
     }
 }

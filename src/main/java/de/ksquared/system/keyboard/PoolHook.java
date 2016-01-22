@@ -1,5 +1,5 @@
 /*
- * Copyright 2011 Kristian Kraljic, Johannes Sch�th 2008. All rights reserved.
+ * Copyright 2011 Kristian Kraljic, Johannes Sch���th 2008. All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without modification, are
  * permitted provided that the following conditions are met:
@@ -23,7 +23,7 @@
  *
  * The views and conclusions contained in the software and documentation are those of the
  * authors and should not be interpreted as representing official policies, either expressed
- * or implied, of Kristian Kraljic and Johannes Sch�th.
+ * or implied, of Kristian Kraljic and Johannes Sch���th.
  */
 
 package de.ksquared.system.keyboard;
@@ -42,5 +42,9 @@ class PoolHook extends Thread {
     public void run() {
         hook = new KeyboardHook();
         hook.registerHook(listener);
+    }
+    
+    public void unregister() {
+        hook.unregisterHook();
     }
 }

@@ -1,5 +1,5 @@
 /*
- * Copyright 2011 Kristian Kraljic, Johannes Sch�th 2008. All rights reserved.
+ * Copyright 2011 Kristian Kraljic, Johannes Sch���th 2008. All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without modification, are
  * permitted provided that the following conditions are met:
@@ -23,7 +23,7 @@
  *
  * The views and conclusions contained in the software and documentation are those of the
  * authors and should not be interpreted as representing official policies, either expressed
- * or implied, of Kristian Kraljic and Johannes Sch�th.
+ * or implied, of Kristian Kraljic and Johannes Sch���th.
  */
 
 package de.ksquared.system.keyboard;
@@ -37,6 +37,13 @@ public class GlobalKeyListener {
 
     public GlobalKeyListener() {
         (hook = new PoolHook(this)).start();
+        Runtime.getRuntime().addShutdownHook(new Thread(new Runnable() {
+            @Override
+            public void run() {
+                if (hook == null) return;
+                hook.unregister();
+            }
+        }));
     }
 
     protected List<KeyListener> listeners = new Vector<KeyListener>();
@@ -47,6 +54,12 @@ public class GlobalKeyListener {
 
     public void removeKeyListener(final KeyListener listener) {
         listeners.remove(listener);
+    }
+    
+    public void dispose () {
+        listeners.clear();
+        hook.unregister();
+        hook = null;
     }
 
     void keyPressed(final KeyEvent event) {

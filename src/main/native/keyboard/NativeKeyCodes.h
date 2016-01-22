@@ -34,6 +34,13 @@ JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_init(JNIE
 
 /*
  * Class:     de_ksquared_system_keyboard_NativeKeyCodes
+ * Method:    KC_UNDEFINED
+ * Signature: ()I
+ */
+JNIEXPORT jint JNICALL Java_de_ksquared_system_keyboard_NativeKeyCodes_KC_1UNDEFINED(JNIEnv *, jclass);
+
+/*
+ * Class:     de_ksquared_system_keyboard_NativeKeyCodes
  * Method:    KC_LBUTTON
  * Signature: ()I
  */
